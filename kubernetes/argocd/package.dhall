@@ -1,10 +1,10 @@
 { Application =
-    ./Application/package.dhall,
-  ApplicationSpec =
-    ./ApplicationSpec/package.dhall,
-  ClusterResource =
-    ./ClusterResource/package.dhall,
-  DestinationSpec =
+    ./Application/package.dhall
+, ApplicationSpec =
+    ./ApplicationSpec/package.dhall
+, ClusterResource =
+    ./ClusterResource/package.dhall
+, DestinationSpec =
     ./DestinationSpec/package.dhall
 , HelmSourceSpec =
     ./HelmSourceSpec/package.dhall
@@ -26,5 +26,6 @@
     ./SyncPolicy/package.dhall
 , SyncPolicyAutomated =
     ./SyncPolicyAutomated/package.dhall
-, TypesUnion = ./TypesUnion.dhall
+, TypesUnion =
+    ./TypesUnion.dhall
 }

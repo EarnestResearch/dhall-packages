@@ -1,3 +1,1 @@
-{
-    TypesUnion = ./TypesUnion.dhall
-}
+{ TypesUnion = ./TypesUnion.dhall }

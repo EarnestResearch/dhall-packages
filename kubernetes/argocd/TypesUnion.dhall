@@ -1,5 +1,1 @@
-< Application :
-    ./Application/Type.dhall
-| Project :
-    ./Project/Type.dhall
->
+< Application : ./Application/Type.dhall | Project : ./Project/Type.dhall >

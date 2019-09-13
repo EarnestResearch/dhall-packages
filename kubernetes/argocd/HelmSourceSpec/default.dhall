@@ -1,1 +1,1 @@
-{ helm = None ../HelmSpec/Type.dhall }
+{ targetRevision = None Text }

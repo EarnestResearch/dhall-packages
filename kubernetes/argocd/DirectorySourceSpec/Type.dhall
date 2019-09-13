@@ -1,7 +1,1 @@
-{ repoURL :
-    Text
-, targetRevision :
-    Optional Text
-, path :
-    Text
-}
+{ repoURL : Text, targetRevision : Optional Text, path : Text }

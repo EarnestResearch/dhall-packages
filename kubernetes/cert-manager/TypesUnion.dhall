@@ -1,4 +1,5 @@
-<
-    Certificate: ./Certificate/Type.dhall
-    | ClusterIssuer: ./ClusterIssuer/Type.dhall
+< Certificate :
+    ./Certificate/Type.dhall
+| ClusterIssuer :
+    ./ClusterIssuer/Type.dhall
 >

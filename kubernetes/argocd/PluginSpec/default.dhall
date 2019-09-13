@@ -1,3 +1,1 @@
-{ 
-    env = None (List ../Parameter/Type.dhall)
-}
+{ env = None (List ../Parameter/Type.dhall) }
