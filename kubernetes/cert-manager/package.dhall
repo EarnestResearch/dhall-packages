@@ -1,9 +1,9 @@
 { Certificate =
     ./Certificate/package.dhall
 , CertificateSpec =
-    ./Certificate/package.dhall
+    ./CertificateSpec/package.dhall
 , ClusterIssuer =
-    ./Certificate/package.dhall
+    ./ClusterIssuer/package.dhall
 , TypesUnion =
     ./TypesUnion.dhall
 }
