@@ -15,4 +15,4 @@ jobs:
     - name: check code
       run: bin/dhall <<< ./package.dhall
     - name: check formatting
-      run: bin/dhall --ascii format --inplace ./package.dhall --check
+      run: find . -name '*.dhall' | xargs -n 1 bin/dhall --ascii format --check --inplace
