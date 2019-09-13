@@ -12,7 +12,7 @@ This repository maps to version [10.0.0](https://github.com/dhall-lang/dhall-lan
 ## How to use this repository
 You can import all the packages by doing 
 ```dhall
-let packages = https://raw.githubusercontent.com/EarnestResearch/dhall-packages/master/package.dhall sha256:7d202e45f8ad9dfb64ea17cc8c8b5965c041183378ed2ec6d7a5097cc30ea6ee
+let packages = https://raw.githubusercontent.com/EarnestResearch/dhall-packages/master/package.dhall sha256:219837188e52e135959bd1603abf1fe8997eeee9d66bfc485a912913ef61acc0
 ```
 
 and then you can use it in your application like this
