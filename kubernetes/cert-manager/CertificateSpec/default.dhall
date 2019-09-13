@@ -1,3 +1,1 @@
-{
-    dnsNames = None (List Text)
-}
+{ dnsNames = None (List Text) }

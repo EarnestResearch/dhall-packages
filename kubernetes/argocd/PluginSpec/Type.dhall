@@ -1,5 +1,1 @@
-{ name :
-    Text
-, parameters :
-    Optional (List ../Parameter/Type.dhall)
-}
+{ name : Text, env : Optional (List ../Parameter/Type.dhall) }

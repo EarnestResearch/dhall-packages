@@ -5,5 +5,5 @@
 , path :
     Text
 , helm :
-    Optional ../HelmSpec/Type.dhall
+    ../HelmSpec/Type.dhall
 }

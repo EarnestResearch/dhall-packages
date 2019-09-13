@@ -5,5 +5,5 @@
 , destination :
     ../DestinationSpec/Type.dhall
 , syncPolicy :
-    ../SyncPolicy/Type.dhall
+    Optional ../SyncPolicy/Type.dhall
 }

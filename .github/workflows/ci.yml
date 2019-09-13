@@ -14,3 +14,5 @@ jobs:
       run: curl -sSL https://github.com/dhall-lang/dhall-haskell/releases/download/1.26.0/dhall-1.26.0-x86_64-linux.tar.bz2 | tar -xj  -C .
     - name: check code
       run: bin/dhall <<< ./package.dhall
+    - name: check formatting
+      run: bin/dhall --ascii format --inplace ./package.dhall --check
