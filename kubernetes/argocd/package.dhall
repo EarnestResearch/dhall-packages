@@ -20,6 +20,8 @@
     ./PluginSpec/package.dhall
 , Project =
     ./Project/package.dhall
+, ProjectSpec =
+    ./ProjectSpec/package.dhall
 , SourceSpec =
     ./SourceSpec/package.dhall
 , SyncPolicy =
