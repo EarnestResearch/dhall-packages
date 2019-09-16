@@ -58,3 +58,8 @@ dhall-to-yaml --omitEmpty
 
 ## Maintainers
 The repository is actively maintained but in alpha stage, expect breaking changes.
+
+## Hat tip
+We are standing on the shoulders of giants. This project wouldn't be possible without:
+- [dhall](https://dhall-lang.org)
+- [dhall-kubernetes](https://github.com/dhall-lang/dhall-kubernetes)
