@@ -12,12 +12,12 @@ This repository maps to version [10.0.0](https://github.com/dhall-lang/dhall-lan
 ## How to use this repository
 You can import all the packages by doing 
 ```dhall
-let packages = https://raw.githubusercontent.com/EarnestResearch/dhall-packages/master/package.dhall sha256:219837188e52e135959bd1603abf1fe8997eeee9d66bfc485a912913ef61acc0
+let packages = https://raw.githubusercontent.com/EarnestResearch/dhall-packages/master/package.dhall sha256:429027b708e2e5192f5f5771c804a7fab99bf1f95761eea4bd9c37ed210e04ad
 ```
 
 and then you can use it in your application like this
 ```dhall
-let packages = https://raw.githubusercontent.com/EarnestResearch/dhall-packages/master/package.dhall sha256:219837188e52e135959bd1603abf1fe8997eeee9d66bfc485a912913ef61acc0
+let packages = https://raw.githubusercontent.com/EarnestResearch/dhall-packages/master/package.dhall sha256:429027b708e2e5192f5f5771c804a7fab99bf1f95761eea4bd9c37ed210e04ad
 
 let argocd = packages.kubernetes.argocd
 
