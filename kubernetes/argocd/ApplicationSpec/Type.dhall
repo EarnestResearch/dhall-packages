@@ -6,4 +6,6 @@
     ../DestinationSpec/Type.dhall
 , syncPolicy :
     Optional ../SyncPolicy/Type.dhall
+, ignoreDifferences :
+    Optional (List ../Difference/Type.dhall)
 }

@@ -6,6 +6,8 @@
     ./ClusterResource/package.dhall
 , DestinationSpec =
     ./DestinationSpec/package.dhall
+, Difference =
+    ./Difference/package.dhall
 , HelmSourceSpec =
     ./HelmSourceSpec/package.dhall
 , HelmSpec =
