@@ -1,4 +1,1 @@
-{ group : Text,
-    kind : Text,
-jsonPointers : List Text
-}
+{ group : Text, kind : Text, jsonPointers : List Text }
