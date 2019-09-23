@@ -49,4 +49,7 @@
 , TypesUnion =
       ./TypesUnion.dhall sha256:78e4af72e3e73d3eb67ecf4e431cf93ee3213d15ed42326f163aafed0a0ba866
     ? ./TypesUnion.dhall
+, util =
+      ./util/package.dhall sha256:5f953306c20ac996192e19dec24c040ef1414cd0cd29cb31d6d075fd4c81ffa8
+    ? ./util/package.dhall
 }
