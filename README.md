@@ -15,6 +15,8 @@ This repository maps to version [10.0.0](https://github.com/dhall-lang/dhall-lan
     - [cert-manager](kubernetes/cert-manager) Some bindings for cert-manager. Contributions welcome!
     - [k8s](kubernetes/k8s) Re-export of [dhall-kubernetes](https://github.com/dhall-lang/dhall-kubernetes) for convenience
     - [kubernetes-external-secrets](kubernetes/kubernetes-external-secrets). Bindings for using the [kubernetes-external-secrets](https://github.com/godaddy/kubernetes-external-secrets) operator
+- [util](util/CronTab) Various utilities and types that can be shared
+    - [CronTab](util/CronTab) CronTab type, default and "show" function.
 
 ## How to use this repository
 You can import all the packages by doing (it's better if you freeze the import and point it to a specific commit):
