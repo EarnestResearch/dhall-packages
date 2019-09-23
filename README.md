@@ -9,15 +9,22 @@ The idea is to facilitate package discovery and provide versions containing pack
 
 This repository maps to version [10.0.0](https://github.com/dhall-lang/dhall-lang/releases/tag/v10.0.0) of the dhall standard, and therefore requires dhall [1.26.0](https://github.com/dhall-lang/dhall-haskell/releases/tag/1.26.0) or later.
 
+## What does this repository contain?
+- [kubernetes](kubernetes) Various bindings for Kubernetes, based on [dhall-kubernetes](https://github.com/dhall-lang/dhall-kubernetes)
+    - [argocd](kubernetes/argocd) Manually curated bindings for ArgoCD. Updated to version 1.2.1
+    - [cert-manager](kubernetes/cert-manager) Some bindings for cert-manager. Contributions welcome!
+    - [k8s](kubernetes/k8s) Re-export of [dhall-kubernetes](https://github.com/dhall-lang/dhall-kubernetes) for convenience
+    - [kubernetes-external-secrets](kubernetes/kubernetes-external-secrets). Bindings for using the [kubernetes-external-secrets](https://github.com/godaddy/kubernetes-external-secrets) operator
+
 ## How to use this repository
-You can import all the packages by doing 
+You can import all the packages by doing (it's better if you freeze the import and point it to a specific commit):
 ```dhall
-let packages = https://raw.githubusercontent.com/EarnestResearch/dhall-packages/master/package.dhall sha256:429027b708e2e5192f5f5771c804a7fab99bf1f95761eea4bd9c37ed210e04ad
+let packages = https://raw.githubusercontent.com/EarnestResearch/dhall-packages/master/package.dhall
 ```
 
 and then you can use it in your application like this
 ```dhall
-let packages = https://raw.githubusercontent.com/EarnestResearch/dhall-packages/master/package.dhall sha256:429027b708e2e5192f5f5771c804a7fab99bf1f95761eea4bd9c37ed210e04ad
+let packages = https://raw.githubusercontent.com/EarnestResearch/dhall-packages/master/package.dhall
 
 let argocd = packages.kubernetes.argocd
 
@@ -49,7 +56,7 @@ in      argocd.Application.default
 
 ```
 
-If you don't want to download the entire packages collection, you can simply reference the `package.dhall` file in the directory you are interested in.
+If you don't want to download the entire packages collection, you can simply reference the `package.dhall` file in the directory you are interested in. This will greatly improve performance if you are only using a subset of the packages.
 
 Note: if you use this repository for kubernetes and you are converting to YAML, you should run
 ```sh
