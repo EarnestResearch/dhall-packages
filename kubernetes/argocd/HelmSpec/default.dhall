@@ -1,4 +1,5 @@
-{ valueFiles = None (List Text)
+{ valueFiles =
+    None (List Text)
 , parameters =
     None
       ( List

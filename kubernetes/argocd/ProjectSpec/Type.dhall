@@ -1,5 +1,7 @@
-{ description : Text
-, sourceRepos : List Text
+{ description :
+    Text
+, sourceRepos :
+    List Text
 , destinations :
     List
       (   ../DestinationSpec/Type.dhall sha256:689554a30489cd60c83a1581ebf4b8de25acd1f6fc9fe7fbfff940b87ae018a3

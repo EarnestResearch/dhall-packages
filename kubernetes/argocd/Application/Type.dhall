@@ -3,8 +3,10 @@ let k8s =
 
 in  { apiVersion :
         Text
-    , kind : Text
-    , metadata : k8s.ObjectMeta
+    , kind :
+        Text
+    , metadata :
+        k8s.ObjectMeta
     , spec :
           ../ApplicationSpec/Type.dhall sha256:0912a3a741d031a0abd521252e0bbe3171cf5c9351cf120ff4e44013c81b08a2
         ? ../ApplicationSpec/Type.dhall

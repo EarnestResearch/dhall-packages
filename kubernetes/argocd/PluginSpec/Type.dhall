@@ -1,4 +1,5 @@
-{ name : Text
+{ name :
+    Text
 , env :
     Optional
       ( List
