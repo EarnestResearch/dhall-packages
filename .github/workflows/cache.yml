@@ -1,0 +1,30 @@
+name: cache
+
+on:
+  push:
+    tags:
+    - '*'        
+
+jobs:
+
+  check-dhall:
+
+    runs-on: ubuntu-latest
+    
+    steps:
+    - uses: actions/checkout@v1
+    - name: Download dhall
+      run: curl -sSL https://github.com/dhall-lang/dhall-haskell/releases/download/1.26.0/dhall-1.26.0-x86_64-linux.tar.bz2 | tar -xj  -C .
+    - name: check code
+      run: |
+        export XDG_CACHE_HOME=$PWD/cache
+        bin/dhall <<< ./package.dhall 1> /dev/null
+    - name: check formatting
+      run: find . -name '*.dhall' | xargs -n 1 bin/dhall --ascii format --check --inplace
+    - uses: meeDamian/github-release@v1.0.0
+      with:
+        token: ${{ secrets.GITHUB_TOKEN }}
+        draft: true
+        gzip: true
+        files: >
+          cache:cache
