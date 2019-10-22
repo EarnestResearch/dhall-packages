@@ -2,7 +2,7 @@
       ../HelmSourceSpec/Type.dhall sha256:c451b93a5e74416387091670060bead8979f3a28f226f4bdf0d6ae233bc8c069
     ? ../HelmSourceSpec/Type.dhall
 | Kustomize :
-      ../KustomizeSourceSpec/Type.dhall sha256:048ba2bbbe76dd581582f686801c1a4588988b1ba88aec0c3d277c12db845fa9
+      ../KustomizeSourceSpec/Type.dhall sha256:196d546b6eba891eb4e8b3a4994182ed56046b93ce3385aba3abc3b4c6711183
     ? ../KustomizeSourceSpec/Type.dhall
 | Plugin :
       ../PluginSourceSpec/Type.dhall sha256:9ece394b13dfc0950b49a1d3f01d11fc8c5deea3655279f4f4cc356c6d74b6a6

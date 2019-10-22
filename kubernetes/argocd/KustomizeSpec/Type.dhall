@@ -1,4 +1,4 @@
 { commonLabels : Optional { additionalProperties : Text }
-, images : List Text
+, images : Optional (List Text)
 , namePrefix : Optional Text
 }

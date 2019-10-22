@@ -9,6 +9,6 @@
         ? ../../SyncPolicy/Type.dhall
       )
 , commonLabels = None { additionalProperties : Text }
-, images = [] : List Text
+, images = None (List Text)
 , namePrefix = None Text
 }

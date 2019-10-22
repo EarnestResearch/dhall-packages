@@ -11,11 +11,11 @@ let ApplicationSpec =
       ? ../../ApplicationSpec/package.dhall
 
 let SourceSpec =
-        ../../SourceSpec/package.dhall sha256:f1b96820008516f6b2e5a3fb8a2a30197a0c3e828db3d105a04b5a4c060729a0
+        ../../SourceSpec/package.dhall sha256:d14d8484d7d4e88287a04110755fe5d0c419dc84ffc9ab3a6f6862fcd05b550e
       ? ../../SourceSpec/package.dhall
 
 let KustomizeSourceSpec =
-        ../../KustomizeSourceSpec/package.dhall sha256:49e0444ed3ea52ee9cc5268c0db9bd9a06e865ec305828870a5403f67c3c4ec9
+        ../../KustomizeSourceSpec/package.dhall sha256:b365227f51a8327ceba1d6d4ef356a284965665cdbf269ecc3ca3306b9fa06e4
       ? ../../KustomizeSourceSpec/package.dhall
 
 let KustomizeSpec =
@@ -27,7 +27,7 @@ let k8s =
       ? ../../../k8s/package.dhall
 
 in      \ ( appConfig
-          :   ../KustomizeAppConfig/Type.dhall sha256:d560f8d2c54266c35fdc696e123ca5decd2a99c5fff9240a7492b8f90ee1f726
+          :   ../KustomizeAppConfig/Type.dhall sha256:9f0b1ccba8b4fd581b08f86ab6e2258ff653ad90de434d467b6504d16abe5269
             ? ../KustomizeAppConfig/Type.dhall
           )
     ->    TypesUnion.Application
