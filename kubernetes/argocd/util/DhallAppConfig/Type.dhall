@@ -1,7 +1,5 @@
-{ name :
-    Text
-, project :
-    Text
+{ name : Text
+, project : Text
 , destination :
       ../../DestinationSpec/Type.dhall sha256:689554a30489cd60c83a1581ebf4b8de25acd1f6fc9fe7fbfff940b87ae018a3
     ? ../../DestinationSpec/Type.dhall

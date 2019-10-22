@@ -1,7 +1,5 @@
-{ name :
-    Text
-, project :
-    Text
+{ name : Text
+, project : Text
 , destination :
       ../../DestinationSpec/Type.dhall sha256:689554a30489cd60c83a1581ebf4b8de25acd1f6fc9fe7fbfff940b87ae018a3
     ? ../../DestinationSpec/Type.dhall
@@ -13,8 +11,7 @@
       (   ../../Parameter/Type.dhall sha256:b8c3c0c4ceb36ba4e6674df5de20ad1d97e120b93b9ce9914a41d0036770dcc4
         ? ../../Parameter/Type.dhall
       )
-, valueFiles :
-    List Text
+, valueFiles : List Text
 , ignoreDifferences :
     List
       (   ../../Difference/Type.dhall sha256:34e396f57549c6855081ee922624f429efd83112e32b707017efdffe0ef6db7f
