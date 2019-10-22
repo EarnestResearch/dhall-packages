@@ -26,16 +26,11 @@ let example1 =
 let example2 =
         assert
       :     show
-              { minute =
-                  "1"
-              , hour =
-                  "2"
-              , day =
-                  "3"
-              , month =
-                  "4"
-              , weekday =
-                  "5"
+              { minute = "1"
+              , hour = "2"
+              , day = "3"
+              , month = "4"
+              , weekday = "5"
               }
         ===  "1 2 3 4 5"
 

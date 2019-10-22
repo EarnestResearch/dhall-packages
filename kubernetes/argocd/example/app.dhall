@@ -12,16 +12,13 @@ let config =
                   ? ./projectName.dhall
               , source =
                       argocd.util.Source.default
-                  //  { url =
-                          "https://github.com/my_org/my_repo.git"
-                      , path =
-                          "k8s"
+                  //  { url = "https://github.com/my_org/my_repo.git"
+                      , path = "k8s"
                       }
               , destination =
                     ./destination.dhall sha256:c42b35050c674d39753b5f45d211bf5aef40f0bcd0d73f8d1d7f0046fb668a2d
                   ? ./destination.dhall
-              , parameters =
-                  [ { name = "IMAGE_VERSION", value = "latest" } ]
+              , parameters = [ { name = "IMAGE_VERSION", value = "latest" } ]
               }
         )
 
