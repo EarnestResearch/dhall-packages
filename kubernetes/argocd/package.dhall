@@ -19,6 +19,12 @@
 , HelmSpec =
       ./HelmSpec/package.dhall sha256:1614bee24c1c396e322f826350481349c3c1342e1e6edcdae7c6925bc9c2224a
     ? ./HelmSpec/package.dhall
+, KustomizeSourceSpec =
+      ./KustomizeSourceSpec/package.dhall sha256:26b8be0970fc46cfdfcb9b36aaeed62d089f1540667b7ecfd9ada4abd6c4a205
+    ? ./KustomizeSourceSpec/package.dhall
+, KustomizeSpec =
+      ./KustomizeSpec/package.dhall sha256:7201abb06c924ff36512f982666f8031ecea556f5a9395f4f0c176b1566b9e91
+    ? ./KustomizeSpec/package.dhall
 , KsonnetSourceSpec =
       ./KsonnetSourceSpec/package.dhall sha256:963618cfcef9ed8aad893f892408de7d3e1133ade3877102b2b46537e162c33c
     ? ./KsonnetSourceSpec/package.dhall
