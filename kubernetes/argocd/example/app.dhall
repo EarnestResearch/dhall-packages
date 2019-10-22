@@ -1,5 +1,5 @@
 let argocd =
-        ../package.dhall sha256:b25147863eac2362c0c7b8d79e92f3181f6ecf57fd82ccb1fcb5a0117f6829e0
+        ../package.dhall sha256:f77ad9ffe16f403d65e30d8c8aba7e15b8ca5761b5676a5410cd2529b6050fda
       ? ../package.dhall
 
 let config =

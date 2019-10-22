@@ -19,7 +19,7 @@ let KustomizeSourceSpec =
       ? ../../KustomizeSourceSpec/package.dhall
 
 let KustomizeSpec =
-        ../../KustomizeSpec/package.dhall sha256:152e77012457d05abc56b34957634ddee7c7ff2dbd4f3c9f828312a454648877
+        ../../KustomizeSpec/package.dhall sha256:5a8177a599828057af94bbfa7b51dfc3551e708e52c1764593378217ee834fca
       ? ../../KustomizeSpec/package.dhall
 
 let k8s =
@@ -44,7 +44,7 @@ in      \ ( appConfig
                                       , path = appConfig.source.path
                                       , targetRevision =
                                           appConfig.source.targetRevision
-                                      , helm =
+                                      , kustomize =
                                               KustomizeSpec.default
                                           //  { commonLabels =
                                                   appConfig.commonLabels
