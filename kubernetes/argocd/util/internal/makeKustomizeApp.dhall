@@ -14,21 +14,21 @@ let SourceSpec =
         ../../SourceSpec/package.dhall sha256:d14d8484d7d4e88287a04110755fe5d0c419dc84ffc9ab3a6f6862fcd05b550e
       ? ../../SourceSpec/package.dhall
 
-let HelmSourceSpec =
-        ../../HelmSourceSpec/package.dhall sha256:380ded7e9ccb3e786facd647fd0d28bb6df20b9dce93e194413b7f6968a39a53
-      ? ../../HelmSourceSpec/package.dhall
+let KustomizeSourceSpec =
+        ../../KustomizeSourceSpec/package.dhall sha256:b365227f51a8327ceba1d6d4ef356a284965665cdbf269ecc3ca3306b9fa06e4
+      ? ../../KustomizeSourceSpec/package.dhall
 
-let HelmSpec =
-        ../../HelmSpec/package.dhall sha256:1614bee24c1c396e322f826350481349c3c1342e1e6edcdae7c6925bc9c2224a
-      ? ../../HelmSpec/package.dhall
+let KustomizeSpec =
+        ../../KustomizeSpec/package.dhall sha256:5a8177a599828057af94bbfa7b51dfc3551e708e52c1764593378217ee834fca
+      ? ../../KustomizeSpec/package.dhall
 
 let k8s =
         ../../../k8s/package.dhall sha256:4c9c40f1762e95578c86c3efbccb87ce74ff67c5111a4c92c4393c6d163bb51b
       ? ../../../k8s/package.dhall
 
 in      \ ( appConfig
-          :   ../HelmAppConfig/Type.dhall sha256:b868c82151c0eb1467b51a7f42be8ccd0c0abb58fd74536672b2de843a21b35a
-            ? ../HelmAppConfig/Type.dhall
+          :   ../KustomizeAppConfig/Type.dhall sha256:9f0b1ccba8b4fd581b08f86ab6e2258ff653ad90de434d467b6504d16abe5269
+            ? ../KustomizeAppConfig/Type.dhall
           )
     ->    TypesUnion.Application
             (     Application.default
@@ -38,18 +38,19 @@ in      \ ( appConfig
                           ApplicationSpec.default
                       //  { project = appConfig.project
                           , source =
-                              SourceSpec.TypesUnion.Helm
-                                (     HelmSourceSpec.default
+                              SourceSpec.TypesUnion.Kustomize
+                                (     KustomizeSourceSpec.default
                                   //  { repoURL = appConfig.source.url
                                       , path = appConfig.source.path
                                       , targetRevision =
                                           appConfig.source.targetRevision
-                                      , helm =
-                                              HelmSpec.default
-                                          //  { valueFiles =
-                                                  Some appConfig.valueFiles
-                                              , parameters =
-                                                  Some appConfig.parameters
+                                      , kustomize =
+                                              KustomizeSpec.default
+                                          //  { commonLabels =
+                                                  appConfig.commonLabels
+                                              , images = appConfig.images
+                                              , namePrefix =
+                                                  appConfig.namePrefix
                                               }
                                       }
                                 )

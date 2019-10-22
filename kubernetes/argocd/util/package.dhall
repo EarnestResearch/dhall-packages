@@ -1,8 +1,8 @@
 { makeApp =
-      ./makeApp.dhall sha256:ffc8f218fa372bc43104c8d9b6851a220b4f230eec65b00de327d003f2ee983c
+      ./makeApp.dhall sha256:9bed22452e97282325f9e4d2bfcb0b5c5a26cc3b956557dfa1cfefb4541e3931
     ? ./makeApp.dhall
 , withSyncWave =
-      ./withSyncWave.dhall sha256:1ac32a0da61336c5c6d43609b24ba2804c01d4c5b084565c74568964c1f98119
+      ./withSyncWave.dhall sha256:538530354d50fb108895e1d5f782bdc805615981b4afb8c3c4ba84bee66f6195
     ? ./withSyncWave.dhall
 , AppConfig =
       ./AppConfig.dhall sha256:1775eb24a12afb4e8ef0495040c5ba95e46672ff5eb99d187785c4124f273ec8
