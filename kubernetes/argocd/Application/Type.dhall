@@ -6,6 +6,6 @@ in  { apiVersion :
     , kind : Text
     , metadata : k8s.ObjectMeta
     , spec :
-          ../ApplicationSpec/Type.dhall sha256:1f271a9936ad477b49a19e7f6806dd8d221dc5306da5e6f3de2fb3e9fae89880
+          ../ApplicationSpec/Type.dhall sha256:c2239be50d38d6e45cbbfcedd4817cbbb5c9a937cd20ab554508009452e4b001
         ? ../ApplicationSpec/Type.dhall
     }

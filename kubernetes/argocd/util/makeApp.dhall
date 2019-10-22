@@ -4,10 +4,10 @@
       )
 ->  merge
       { DhallAppConfig =
-            ./internal/makeDhallApp.dhall sha256:e8cd843fce0a7cb29232d32b948347fe2aff37bb05f1a7fd87bddcda3949dfd8
+            ./internal/makeDhallApp.dhall sha256:307117d0407f7386c86538d9d619cd19ae3fb06f172cb39858df05c83e08107a
           ? ./internal/makeDhallApp.dhall
       , HelmAppConfig =
-            ./internal/makeHelmApp.dhall sha256:774c1f9cdef222c4fda50c920a6f2833bc27cfc77cd545f9a20a78f770a0cecf
+            ./internal/makeHelmApp.dhall sha256:574e8b4cfc308016445d335b5c31ceba11039d0f14e6cfdff5c896e890b30a46
           ? ./internal/makeHelmApp.dhall
       }
       appConfig
