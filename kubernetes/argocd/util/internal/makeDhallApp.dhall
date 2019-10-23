@@ -17,7 +17,7 @@ let ApplicationSpec =
       ? ../../ApplicationSpec/package.dhall
 
 let SourceSpec =
-        ../../SourceSpec/package.dhall sha256:d14d8484d7d4e88287a04110755fe5d0c419dc84ffc9ab3a6f6862fcd05b550e
+        ../../SourceSpec/package.dhall sha256:f1b96820008516f6b2e5a3fb8a2a30197a0c3e828db3d105a04b5a4c060729a0
       ? ../../SourceSpec/package.dhall
 
 let PluginSourceSpec =
