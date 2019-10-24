@@ -10,4 +10,7 @@
 , argocd =
       ./argocd/package.dhall sha256:b0ee43f5521aa371be2ea6ac13e1a1c85c7f01cec15431ce58ec79fe9f740847
     ? ./argocd/package.dhall
+, argo =
+      ./argo/schemas.dhall sha256:3dd2e0a8f264968fccb2358b799afacd493f205234501820cf5b3e2134ef1704
+    ? ./argo/schemas.dhall
 }
