@@ -2,7 +2,7 @@
       ./Application/package.dhall sha256:47bd28e686730591bffb30ddb014ea47470bfd47b2cf3b2aff72fd79167f4089
     ? ./Application/package.dhall
 , ApplicationSpec =
-      ./ApplicationSpec/package.dhall sha256:29e5cc3a22a0e4fd786871d6c285ea7333d9cbef6341d91ba4045491b0bde157
+      ./ApplicationSpec/package.dhall sha256:c048e113b5a4ea3dd4406313697fa405b67a7d536b7ee806633884f0989eedfb
     ? ./ApplicationSpec/package.dhall
 , ClusterResource =
       ./ClusterResource/package.dhall sha256:828ecf9c58164b6b726669656ca2fbd13790dbd31b5a18443f8f09f89a78d875
