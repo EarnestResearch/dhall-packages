@@ -34,30 +34,26 @@ let argocd = packages.kubernetes.argocd
 
 let k8s = packages.kubernetes.k8s
 
-in      argocd.Application.default
-    //  { metadata =
-            k8s.defaults.ObjectMeta // { name = "hello-app" }
-        , spec =
-                argocd.ApplicationSpec.default
-            //  { project =
-                    "hello-project"
-                , source =
-                        argocd.SourceSpec.TypesUnion.Plugin (argocd.PluginSourceSpec.default
-                    //  { repoURL = "https://github.com/EarnestResearch/dhall-packages.git",
-                          path = "kubernetes",
-                            plugin =
-                            argocd.PluginSpec.default // { name =
-                                "dhall-to-yaml"
-                            }
-                        })
-                , destination =
-                    argocd.DestinationSpec.default // {
-                        server = "kubernetes.svc.local",
-                        namespace = "default"
-                    }
-                }
-        } : argocd.Application.Type
-
+in  argocd.Application::{
+    , metadata = k8s.defaults.ObjectMeta // { name = "hello-app" }
+    , spec =
+        argocd.ApplicationSpec::{
+        , project = "hello-project"
+        , source =
+            argocd.SourceSpec.TypesUnion.Plugin
+              argocd.PluginSourceSpec::{
+              , repoURL =
+                  "https://github.com/EarnestResearch/dhall-packages.git"
+              , path = "kubernetes"
+              , plugin = argocd.PluginSpec::{ name = "dhall-to-yaml" }
+              }
+        , destination =
+            argocd.DestinationSpec::{
+            , server = "kubernetes.svc.local"
+            , namespace = "default"
+            }
+        }
+    }
 ```
 
 If you don't want to download the entire packages collection, you can simply reference the `package.dhall` file in the directory you are interested in. This will greatly improve performance if you are only using a subset of the packages.
