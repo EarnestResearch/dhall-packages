@@ -17,10 +17,10 @@
       ./LoadbalancerPolicy/package.dhall sha256:4745eec474d5fee647461c62cc5ad690860f16dfa5a9cf19b6763d127ec72c0c
     ? ./LoadbalancerPolicy/package.dhall
 , Mapping =
-      ./Mapping/package.dhall sha256:a3e7df8c62240f18239f22bc103553b9b6e7b17a6c9344791889903c8edba6a6
+      ./Mapping/package.dhall sha256:49347210abdc857d876a4a569dac341fdc0e4747d436d541ddfb82325eaa501f
     ? ./Mapping/package.dhall
 , MappingSpec =
-      ./MappingSpec/package.dhall sha256:e16a8312d13afa3d5c8275c9ae53ee5fc59d159103d64befbf616fbab2f9c477
+      ./MappingSpec/package.dhall sha256:37089a4740c288e68268361ada17938bf2715c63b830fdfb7b9de360ff815c70
     ? ./MappingSpec/package.dhall
 , RetryOnValue =
       ./RetryOnValue/Type.dhall sha256:f4b75c7df63d13e9637cc950fc6109465f6cbaaffb767248e42f963ed36b28b0
