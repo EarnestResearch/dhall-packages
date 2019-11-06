@@ -13,7 +13,7 @@ let Application =
       ? ../../Application/package.dhall
 
 let ApplicationSpec =
-        ../../ApplicationSpec/package.dhall sha256:29e5cc3a22a0e4fd786871d6c285ea7333d9cbef6341d91ba4045491b0bde157
+        ../../ApplicationSpec/package.dhall sha256:c048e113b5a4ea3dd4406313697fa405b67a7d536b7ee806633884f0989eedfb
       ? ../../ApplicationSpec/package.dhall
 
 let SourceSpec =

@@ -1,5 +1,5 @@
 let argocd =
-        ../package.dhall sha256:b0ee43f5521aa371be2ea6ac13e1a1c85c7f01cec15431ce58ec79fe9f740847
+        ../package.dhall sha256:e45774280936733937712c177f862b4f0dd007fc583a231f391b5671bee54f57
       ? ../package.dhall
 
 let k8s =
