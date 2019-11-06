@@ -7,7 +7,7 @@ Dhall is a strongly-typed programmable configuration language that can be used e
 This repository contains useful generic dhall packages that can be reused.
 The idea is to facilitate package discovery and provide versions containing packages compatible to each other. 
 
-This repository maps to version [10.0.0](https://github.com/dhall-lang/dhall-lang/releases/tag/v10.0.0) of the dhall standard, and therefore requires dhall [1.26.0](https://github.com/dhall-lang/dhall-haskell/releases/tag/1.26.0) or later.
+This repository maps to version [11.1.0](https://github.com/dhall-lang/dhall-lang/releases/tag/v11.1.0) of the dhall standard, and therefore requires dhall [1.27.0](https://github.com/dhall-lang/dhall-haskell/releases/tag/1.27.0) or later.
 
 ## What does this repository contain?
 - [kubernetes](kubernetes) Various bindings for Kubernetes, based on [dhall-kubernetes](https://github.com/dhall-lang/dhall-kubernetes)
@@ -15,6 +15,8 @@ This repository maps to version [10.0.0](https://github.com/dhall-lang/dhall-lan
     - [cert-manager](kubernetes/cert-manager) Some bindings for cert-manager. Contributions welcome!
     - [k8s](kubernetes/k8s) Re-export of [dhall-kubernetes](https://github.com/dhall-lang/dhall-kubernetes) for convenience
     - [kubernetes-external-secrets](kubernetes/kubernetes-external-secrets). Bindings for using the [kubernetes-external-secrets](https://github.com/godaddy/kubernetes-external-secrets) operator
+    - [argo](kubernetes/argo). Automatically generated bindings for Argo Workflows.
+    - [ambassador](kubernetes/ambassador). Manually curated bindings for Ambassador.
 - [util](util/CronTab) Various utilities and types that can be shared
     - [CronTab](util/CronTab) CronTab type, default and "show" function.
 
@@ -32,30 +34,26 @@ let argocd = packages.kubernetes.argocd
 
 let k8s = packages.kubernetes.k8s
 
-in      argocd.Application.default
-    //  { metadata =
-            k8s.defaults.ObjectMeta // { name = "hello-app" }
-        , spec =
-                argocd.ApplicationSpec.default
-            //  { project =
-                    "hello-project"
-                , source =
-                        argocd.SourceSpec.TypesUnion.Plugin (argocd.PluginSourceSpec.default
-                    //  { repoURL = "https://github.com/EarnestResearch/dhall-packages.git",
-                          path = "kubernetes",
-                            plugin =
-                            argocd.PluginSpec.default // { name =
-                                "dhall-to-yaml"
-                            }
-                        })
-                , destination =
-                    argocd.DestinationSpec.default // {
-                        server = "kubernetes.svc.local",
-                        namespace = "default"
-                    }
-                }
-        } : argocd.Application.Type
-
+in  argocd.Application::{
+    , metadata = k8s.defaults.ObjectMeta // { name = "hello-app" }
+    , spec =
+        argocd.ApplicationSpec::{
+        , project = "hello-project"
+        , source =
+            argocd.SourceSpec.TypesUnion.Plugin
+              argocd.PluginSourceSpec::{
+              , repoURL =
+                  "https://github.com/EarnestResearch/dhall-packages.git"
+              , path = "kubernetes"
+              , plugin = argocd.PluginSpec::{ name = "dhall-to-yaml" }
+              }
+        , destination =
+            argocd.DestinationSpec::{
+            , server = "kubernetes.svc.local"
+            , namespace = "default"
+            }
+        }
+    }
 ```
 
 If you don't want to download the entire packages collection, you can simply reference the `package.dhall` file in the directory you are interested in. This will greatly improve performance if you are only using a subset of the packages.
