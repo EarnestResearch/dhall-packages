@@ -20,7 +20,7 @@
       ./Mapping/package.dhall sha256:a3e7df8c62240f18239f22bc103553b9b6e7b17a6c9344791889903c8edba6a6
     ? ./Mapping/package.dhall
 , MappingSpec =
-      ./MappingSpec/package.dhall sha256:a94227128dc6650daaba89d825e4e805c07eda2c294dfb2d5c8006b0444b40db
+      ./MappingSpec/package.dhall sha256:e16a8312d13afa3d5c8275c9ae53ee5fc59d159103d64befbf616fbab2f9c477
     ? ./MappingSpec/package.dhall
 , RetryOnValue =
       ./RetryOnValue/Type.dhall sha256:f4b75c7df63d13e9637cc950fc6109465f6cbaaffb767248e42f963ed36b28b0
