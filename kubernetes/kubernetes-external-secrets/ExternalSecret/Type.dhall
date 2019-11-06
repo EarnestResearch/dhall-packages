@@ -4,10 +4,8 @@ let k8s =
 
 in  { apiVersion :
         Text
-    , kind :
-        Text
-    , metadata :
-        k8s.types.ObjectMeta
+    , kind : Text
+    , metadata : k8s.types.ObjectMeta
     , secretDescriptor :
           ../SecretDescriptor/Type.dhall sha256:dee93731d857bdcfb1bd4e8f30f429c119e19fb537f01029d11bc2ee11a5a514
         ? ../SecretDescriptor/Type.dhall

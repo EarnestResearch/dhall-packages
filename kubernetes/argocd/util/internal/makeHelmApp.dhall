@@ -36,15 +36,12 @@ in      \ ( appConfig
                       k8s.defaults.ObjectMeta // { name = appConfig.name }
                   , spec =
                           ApplicationSpec.default
-                      //  { project =
-                              appConfig.project
+                      //  { project = appConfig.project
                           , source =
                               SourceSpec.TypesUnion.Helm
                                 (     HelmSourceSpec.default
-                                  //  { repoURL =
-                                          appConfig.source.url
-                                      , path =
-                                          appConfig.source.path
+                                  //  { repoURL = appConfig.source.url
+                                      , path = appConfig.source.path
                                       , targetRevision =
                                           appConfig.source.targetRevision
                                       , helm =
@@ -56,12 +53,9 @@ in      \ ( appConfig
                                               }
                                       }
                                 )
-                          , destination =
-                              appConfig.destination
-                          , syncPolicy =
-                              appConfig.syncPolicy
-                          , ignoreDifferences =
-                              Some appConfig.ignoreDifferences
+                          , destination = appConfig.destination
+                          , syncPolicy = appConfig.syncPolicy
+                          , ignoreDifferences = Some appConfig.ignoreDifferences
                           }
                   }
             )

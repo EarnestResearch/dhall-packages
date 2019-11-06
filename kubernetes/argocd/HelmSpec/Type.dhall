@@ -1,5 +1,4 @@
-{ valueFiles :
-    Optional (List Text)
+{ valueFiles : Optional (List Text)
 , parameters :
     Optional
       ( List

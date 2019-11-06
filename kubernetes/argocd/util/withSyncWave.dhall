@@ -23,9 +23,7 @@ let withSyncWaveMetadata =
       ->      metadata
           //  { annotations =
                     metadata.annotations
-                  # ( toMap
-                        { `argocd.argoproj.io/sync-wave` = Integer/show wave }
-                    )
+                  # toMap { `argocd.argoproj.io/sync-wave` = Integer/show wave }
               }
 
 let withSyncWaveApplication =
@@ -43,9 +41,7 @@ let withSyncWaveProject =
 in      \(wave : Integer)
     ->  \(argocdUnion : TypesUnion)
     ->  merge
-          { Application =
-              withSyncWaveApplication wave
-          , Project =
-              withSyncWaveProject wave
+          { Application = withSyncWaveApplication wave
+          , Project = withSyncWaveProject wave
           }
           argocdUnion
