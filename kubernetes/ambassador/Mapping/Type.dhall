@@ -6,7 +6,9 @@ let Map =
         https://prelude.dhall-lang.org/v11.1.0/Map/Type sha256:210c7a9eba71efbb0f7a66b3dcf8b9d3976ffc2bc0e907aadfb6aa29c333e8ed
       ? https://prelude.dhall-lang.org/v11.1.0/Map/Type
 
-let k8s = ../../k8s/package.dhall
+let k8s =
+        ../../k8s/package.dhall sha256:4c9c40f1762e95578c86c3efbccb87ce74ff67c5111a4c92c4393c6d163bb51b
+      ? ../../k8s/package.dhall
 
 in  { apiVersion :
         Text

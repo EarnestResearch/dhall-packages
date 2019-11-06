@@ -3,7 +3,7 @@
     ? ../BackendType/Type.dhall
 , data :
     List
-      (   ../SecretsManagerExternalData/Type.dhall sha256:e6a8a0da8cc20ed4f880bd98a641988de5386e650d472ef1c8cce90932383ba3
-        ? ../SecretsManagerExternalData/Type.dhall
+      (   ../SystemManagerExternalData/Type.dhall sha256:de7225d1dfd26a74710c2a17d3c1e09a9ef637aa1d0ac697e03673c141cd7e03
+        ? ../SystemManagerExternalData/Type.dhall
       )
 }

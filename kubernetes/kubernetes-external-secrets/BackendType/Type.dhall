@@ -1,1 +1,1 @@
-< secretsManager | systemsManager >
+< secretsManager | systemManager >

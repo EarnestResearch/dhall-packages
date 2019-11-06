@@ -17,7 +17,7 @@
       ./LoadbalancerPolicy/package.dhall sha256:4745eec474d5fee647461c62cc5ad690860f16dfa5a9cf19b6763d127ec72c0c
     ? ./LoadbalancerPolicy/package.dhall
 , Mapping =
-      ./Mapping/package.dhall sha256:705a53b80b67432023e6f443775a46ee05cb729a4de3323225d0f99fb73acf69
+      ./Mapping/package.dhall sha256:1f4a426bad14d2dbc19cc600998ee9793d4664a49084b1f997c86dd9d1b9db34
     ? ./Mapping/package.dhall
 , RetryOnValue =
       ./RetryOnValue/Type.dhall sha256:f4b75c7df63d13e9637cc950fc6109465f6cbaaffb767248e42f963ed36b28b0
