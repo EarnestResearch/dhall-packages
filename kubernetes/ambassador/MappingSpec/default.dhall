@@ -54,7 +54,6 @@ in  { add_linkerd_headers =
           )
     , method = None Text
     , method_regex = None Bool
-    , prefix = None Text
     , prefix_regex = None Bool
     , remove_request_headers = None (List Text)
     , remove_response_headers = None (List Text)

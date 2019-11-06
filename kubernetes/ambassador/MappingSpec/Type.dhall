@@ -59,7 +59,7 @@ in  { service :
           )
     , method : Optional Text
     , method_regex : Optional Bool
-    , prefix : Optional Text
+    , prefix : Text
     , prefix_regex : Optional Bool
     , remove_request_headers : Optional (List Text)
     , remove_response_headers : Optional (List Text)
