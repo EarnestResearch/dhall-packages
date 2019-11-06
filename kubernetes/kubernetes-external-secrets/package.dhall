@@ -2,7 +2,7 @@
       ./BackendType/package.dhall sha256:8a611d85765bbc1962b973518fb2cc14adf28df15be2d12c9b63769d0a8cdc9a
     ? ./BackendType/package.dhall
 , ExternalSecret =
-      ./ExternalSecret/package.dhall sha256:ab5525c3e6150f26e44d92803f1155f854d99fa84a48427413beb07d800754d2
+      ./ExternalSecret/package.dhall sha256:1faeccea0701f13f5cf42dd76fa109f0a034e9c80ea9c2484cc0d8c6371c6578
     ? ./ExternalSecret/package.dhall
 , SecretsManagerExternalData =
       ./SecretsManagerExternalData/package.dhall sha256:4fc3cc01529eb9817d773b75827f3fae1a96305e9dea1cfff40b710a81556377
