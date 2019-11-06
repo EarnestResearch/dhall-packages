@@ -13,6 +13,6 @@ in  { apiVersion :
     , kind : Text
     , metadata : k8s.types.ObjectMeta
     , spec :
-          ../MappingSpec/Type.dhall sha256:f5b5258caed2a0bb977b54ea36bbb3fe78d9a23cf1d656d9d7d24e92499aa70a
+          ../MappingSpec/Type.dhall sha256:b3578474b05cdee48b9140b2bf63a6c62f864dc80b77c7ea97bdb4d6c1155cb6
         ? ../MappingSpec/Type.dhall
     }
