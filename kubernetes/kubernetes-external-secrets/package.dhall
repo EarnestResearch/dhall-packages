@@ -16,13 +16,7 @@
 , SecretsManagerSecretDescriptor =
       ./SecretsManagerSecretDescriptor/package.dhall sha256:99c7730a56295bda9a7a7cb97004d08d1d113bb85f74d7013328b0fb04935219
     ? ./SecretsManagerSecretDescriptor/package.dhall
-    ? (   ./SecretsManagerSecretDescriptor/package.dhall sha256:99c7730a56295bda9a7a7cb97004d08d1d113bb85f74d7013328b0fb04935219
-        ? ./SecretsManagerSecretDescriptor/package.dhall
-      )
 , SystemManagerSecretDescriptor =
       ./SystemManagerSecretDescriptor/package.dhall sha256:5e504c0b997eb9523fe8e8ff7a92bd6878e2e24673e84e701eb88bc40c96db87
     ? ./SystemManagerSecretDescriptor/package.dhall
-    ? (   ./SystemManagerSecretDescriptor/package.dhall sha256:5e504c0b997eb9523fe8e8ff7a92bd6878e2e24673e84e701eb88bc40c96db87
-        ? ./SystemManagerSecretDescriptor/package.dhall
-      )
 }
