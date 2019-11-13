@@ -1,4 +1,19 @@
-{ CircuitBreaker =
+{ AuthService =
+      ./AuthService/package.dhall sha256:38aba5d9403f93dfc41da40bc78950872a8ec03c60b37fb903a110506094be79
+    ? ./AuthService/package.dhall
+, AuthServiceIncludeBody =
+      ./AuthServiceIncludeBody/package.dhall sha256:4f65364e68fd4e6059f72a338fc50c92c519839c6e9f452dbc0befdc46e0b75f
+    ? ./AuthServiceIncludeBody/package.dhall
+, AuthServiceProtocol =
+      ./AuthServiceProtocol/Type.dhall sha256:313bceb2e0eb1eaabdeeb91adc6d6690eb9cd21941ddbf20a22012b188330a2d
+    ? ./AuthServiceProtocol/Type.dhall
+, AuthServiceSpec =
+      ./AuthServiceSpec/package.dhall sha256:697637fccf454839dc0683172b39a60d654ce4265b382d4c987b8136dcb85d52
+    ? ./AuthServiceSpec/package.dhall
+, AuthServiceStatusOnError =
+      ./AuthServiceStatusOnError/package.dhall sha256:afaec6d7f1067f9885c725ed4b0286a58a7285380a76d58276c3150d8efc6900
+    ? ./AuthServiceStatusOnError/package.dhall
+, CircuitBreaker =
       ./CircuitBreaker/package.dhall sha256:9aa003224971ea5f5c8dde34750a6122dbbf9949bdb7a4d2495f12cbdb23ca14
     ? ./CircuitBreaker/package.dhall
 , Cors =
