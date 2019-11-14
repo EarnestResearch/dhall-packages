@@ -1,0 +1,37 @@
+let Map = https://prelude.dhall-lang.org/v11.1.0/Map/Type
+
+in  { add_linkerd_headers = None Bool
+    , add_request_headers = None (Map Text ../HeaderValue/Type.dhall)
+    , add_response_headers = None (Map Text ../HeaderValue/Type.dhall)
+    , cluster_idle_timeout_ms = None Natural
+    , cors = None ../Cors/Type.dhall
+    , circuit_breakers = None (List ../CircuitBreaker/Type.dhall)
+    , enable_ipv4 = None Bool
+    , enable_ipv6 = None Bool
+    , grpc = None Bool
+    , headers = None (Map Text ../HeaderValue/Type.dhall)
+    , host = None Text
+    , host_regex = None Bool
+    , host_rewrite = None Text
+    , load_balancer = None ../Loadbalancer/Type.dhall
+    , method = None Text
+    , method_regex = None Bool
+    , prefix_regex = None Bool
+    , remove_request_headers = None (List Text)
+    , remove_response_headers = None (List Text)
+    , regex_headers = None (Map Text Text)
+    , rewrite = None Text
+    , retry_policy = None ../RetryPolicy/Type.dhall
+    , timeout_ms = None Natural
+    , connect_timeout_ms = None Natural
+    , tls = None Bool
+    , use_websocket = None Bool
+    , shadow = None Bool
+    , weight = None Natural
+    , auto_host_rewrite = None Bool
+    , case_sensitive = None Bool
+    , host_redirect = None Bool
+    , path_redirect = None Bool
+    , precedence = None Integer
+    , bypass_auth = None Bool
+    }
