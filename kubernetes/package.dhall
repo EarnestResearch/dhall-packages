@@ -11,7 +11,7 @@
       ./argocd/package.dhall sha256:e45774280936733937712c177f862b4f0dd007fc583a231f391b5671bee54f57
     ? ./argocd/package.dhall
 , argo =
-      ./argo/schemas.dhall sha256:3dd2e0a8f264968fccb2358b799afacd493f205234501820cf5b3e2134ef1704
+      ./argo/schemas.dhall sha256:0b2f1fd43591a5f4df3156179f601fbea9adc86c740becf5629570bf82a8874e
     ? ./argo/schemas.dhall
 , ambassador =
       ./ambassador/package.dhall sha256:7c482aa11b7c7d4679e0a8914b89f4c4e07c5b6b70ce961a87082f63f3833c75
