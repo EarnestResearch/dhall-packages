@@ -3285,7 +3285,8 @@ index 0aee00a..c0849f2 100644
 +++ b/kubernetes/package.dhall
 @@ -10,4 +10,7 @@
  , argocd =
-       ./argocd/package.dhall
+       ./argocd/package.dhall sha256:b0ee43f5521aa371be2ea6ac13e1a1c85c7f01cec15431ce58ec79fe9f740847
+     ? ./argocd/package.dhall
 +, argo =
 +      ./argo/schemas.dhall sha256:3dd2e0a8f264968fccb2358b799afacd493f205234501820cf5b3e2134ef1704
 +    ? ./argo/schemas.dhall
@@ -3297,6 +3298,7 @@ index 49884b6..d0325df 100644
 @@ -1,5 +1,5 @@
  { kubernetes =
 -      ./kubernetes/package.dhall sha256:b31876ad89d6dd77a73253fe8637886656aaa4e7197ef004965073ff7256a3c1
-+      ./kubernetes/package.dhall
++      ./kubernetes/package.dhall sha256:fed9dd034e468800bc28e0cbf3969f94e14e3fa652be5a40174939e346cbb45a
+     ? ./kubernetes/package.dhall
  , Prelude =
        https://prelude.dhall-lang.org/v10.0.0/package.dhall sha256:771c7131fc87e13eb18f770a27c59f9418879f7e230ba2a50e46f4461f43ec69
