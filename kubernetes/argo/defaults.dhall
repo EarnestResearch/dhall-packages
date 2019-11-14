@@ -92,10 +92,10 @@
       ./defaults/io.argoproj.workflow.v1alpha1.ValueFrom.dhall sha256:555180487c64ec519a9edfab1ecbf4a9ace197e6b781029b2fad639658ec0bd6
     ? ./defaults/io.argoproj.workflow.v1alpha1.ValueFrom.dhall
 , Workflow =
-      ./defaults/io.argoproj.workflow.v1alpha1.Workflow.dhall sha256:b9cf5c57462ff2398c2611de50ff3261730a753576aae348b75262519cfb2735
+      ./defaults/io.argoproj.workflow.v1alpha1.Workflow.dhall sha256:f4b4f3353829b867084128b99c102bbeb5a2b621fd9a106ba84b2b3f0c2505ea
     ? ./defaults/io.argoproj.workflow.v1alpha1.Workflow.dhall
 , WorkflowList =
-      ./defaults/io.argoproj.workflow.v1alpha1.WorkflowList.dhall sha256:0137972872135ae63d878cfdd672c184081196d2689dd9df5a9d2a5009a3951b
+      ./defaults/io.argoproj.workflow.v1alpha1.WorkflowList.dhall sha256:22da1e7f5446e52ce5812d311ee47c0aa9580834353eb88342c3577e7fce0609
     ? ./defaults/io.argoproj.workflow.v1alpha1.WorkflowList.dhall
 , WorkflowSpec =
       ./defaults/io.argoproj.workflow.v1alpha1.WorkflowSpec.dhall sha256:23fed14b3cc7b68662d60c24fae28a2d60b5333a25eb66bb3d62d56090ffccfd
