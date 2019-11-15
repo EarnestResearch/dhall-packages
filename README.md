@@ -63,6 +63,12 @@ Note: if you use this repository for kubernetes and you are converting to YAML, 
 dhall-to-yaml --omitEmpty
 ```
 
+## Binary cache
+Each release contains a `cache.tgz` file with the cache of the whole package. You can download it and save the content into your `$XDG_CACHE_HOME` (`~/.cache` if unset) and use it as cache to speed up resolution.
+
+## Contributing
+See [CONTRIBUTING](CONTRIBUTING.md)
+
 ## Maintainers
 The repository is actively maintained but in alpha stage, expect breaking changes.
 
