@@ -23,7 +23,7 @@ let KustomizeSpec =
       ? ../../KustomizeSpec/package.dhall
 
 let k8s =
-        ../../../k8s/package.dhall sha256:4c9c40f1762e95578c86c3efbccb87ce74ff67c5111a4c92c4393c6d163bb51b
+        ../../../k8s/package.dhall sha256:4159b87d109cd88610c9d440701091d6fdd718d81aba5691e2d6ed7c93fbcd09
       ? ../../../k8s/package.dhall
 
 in      \ ( appConfig
@@ -31,33 +31,27 @@ in      \ ( appConfig
             ? ../KustomizeAppConfig/Type.dhall
           )
     ->    TypesUnion.Application
-            (     Application.default
-              //  { metadata =
-                      k8s.defaults.ObjectMeta // { name = appConfig.name }
-                  , spec =
-                          ApplicationSpec.default
-                      //  { project = appConfig.project
-                          , source =
-                              SourceSpec.TypesUnion.Kustomize
-                                (     KustomizeSourceSpec.default
-                                  //  { repoURL = appConfig.source.url
-                                      , path = appConfig.source.path
-                                      , targetRevision =
-                                          appConfig.source.targetRevision
-                                      , kustomize =
-                                              KustomizeSpec.default
-                                          //  { commonLabels =
-                                                  appConfig.commonLabels
-                                              , images = appConfig.images
-                                              , namePrefix =
-                                                  appConfig.namePrefix
-                                              }
-                                      }
-                                )
-                          , destination = appConfig.destination
-                          , syncPolicy = appConfig.syncPolicy
-                          , ignoreDifferences = Some appConfig.ignoreDifferences
+            Application::{
+            , metadata = k8s.schemas.ObjectMeta::{ name = appConfig.name }
+            , spec =
+                ApplicationSpec::{
+                , project = appConfig.project
+                , source =
+                    SourceSpec.TypesUnion.Kustomize
+                      KustomizeSourceSpec::{
+                      , repoURL = appConfig.source.url
+                      , path = appConfig.source.path
+                      , targetRevision = appConfig.source.targetRevision
+                      , kustomize =
+                          KustomizeSpec::{
+                          , commonLabels = appConfig.commonLabels
+                          , images = appConfig.images
+                          , namePrefix = appConfig.namePrefix
                           }
-                  }
-            )
+                      }
+                , destination = appConfig.destination
+                , syncPolicy = appConfig.syncPolicy
+                , ignoreDifferences = Some appConfig.ignoreDifferences
+                }
+            }
         : TypesUnion
