@@ -20,30 +20,26 @@ let k8s = ../../../k8s/package.dhall
 
 in      \(appConfig : ../DhallAppConfig/Type.dhall)
     ->    TypesUnion.Application
-            (     Application.default
-              //  { metadata =
-                      k8s.defaults.ObjectMeta // { name = appConfig.name }
-                  , spec =
-                          ApplicationSpec.default
-                      //  { project = appConfig.project
-                          , source =
-                              SourceSpec.TypesUnion.Plugin
-                                (     PluginSourceSpec.default
-                                  //  { repoURL = appConfig.source.url
-                                      , path = appConfig.source.path
-                                      , targetRevision =
-                                          appConfig.source.targetRevision
-                                      , plugin =
-                                              PluginSpec.default
-                                          //  { name = "dhall-to-yaml"
-                                              , env = Some appConfig.parameters
-                                              }
-                                      }
-                                )
-                          , destination = appConfig.destination
-                          , syncPolicy = appConfig.syncPolicy
-                          , ignoreDifferences = Some appConfig.ignoreDifferences
+            Application::{
+            , metadata = k8s.schemas.ObjectMeta::{ name = appConfig.name }
+            , spec =
+                ApplicationSpec::{
+                , project = appConfig.project
+                , source =
+                    SourceSpec.TypesUnion.Plugin
+                      PluginSourceSpec::{
+                      , repoURL = appConfig.source.url
+                      , path = appConfig.source.path
+                      , targetRevision = appConfig.source.targetRevision
+                      , plugin =
+                          PluginSpec::{
+                          , name = "dhall-to-yaml"
+                          , env = Some appConfig.parameters
                           }
-                  }
-            )
+                      }
+                , destination = appConfig.destination
+                , syncPolicy = appConfig.syncPolicy
+                , ignoreDifferences = Some appConfig.ignoreDifferences
+                }
+            }
         : TypesUnion

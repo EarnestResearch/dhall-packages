@@ -32,10 +32,10 @@ let packages = https://raw.githubusercontent.com/EarnestResearch/dhall-packages/
 
 let argocd = packages.kubernetes.argocd
 
-let k8s = packages.kubernetes.k8s
+let k8s = packages.kubernetes.k8s.schemas
 
 in  argocd.Application::{
-    , metadata = k8s.defaults.ObjectMeta // { name = "hello-app" }
+    , metadata = k8s.ObjectMeta::{ name = "hello-app" }
     , spec =
         argocd.ApplicationSpec::{
         , project = "hello-project"

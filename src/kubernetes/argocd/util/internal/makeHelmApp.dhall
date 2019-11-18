@@ -14,32 +14,26 @@ let k8s = ../../../k8s/package.dhall
 
 in      \(appConfig : ../HelmAppConfig/Type.dhall)
     ->    TypesUnion.Application
-            (     Application.default
-              //  { metadata =
-                      k8s.defaults.ObjectMeta // { name = appConfig.name }
-                  , spec =
-                          ApplicationSpec.default
-                      //  { project = appConfig.project
-                          , source =
-                              SourceSpec.TypesUnion.Helm
-                                (     HelmSourceSpec.default
-                                  //  { repoURL = appConfig.source.url
-                                      , path = appConfig.source.path
-                                      , targetRevision =
-                                          appConfig.source.targetRevision
-                                      , helm =
-                                              HelmSpec.default
-                                          //  { valueFiles =
-                                                  Some appConfig.valueFiles
-                                              , parameters =
-                                                  Some appConfig.parameters
-                                              }
-                                      }
-                                )
-                          , destination = appConfig.destination
-                          , syncPolicy = appConfig.syncPolicy
-                          , ignoreDifferences = Some appConfig.ignoreDifferences
+            Application::{
+            , metadata = k8s.schemas.ObjectMeta::{ name = appConfig.name }
+            , spec =
+                ApplicationSpec::{
+                , project = appConfig.project
+                , source =
+                    SourceSpec.TypesUnion.Helm
+                      HelmSourceSpec::{
+                      , repoURL = appConfig.source.url
+                      , path = appConfig.source.path
+                      , targetRevision = appConfig.source.targetRevision
+                      , helm =
+                          HelmSpec::{
+                          , valueFiles = Some appConfig.valueFiles
+                          , parameters = Some appConfig.parameters
                           }
-                  }
-            )
+                      }
+                , destination = appConfig.destination
+                , syncPolicy = appConfig.syncPolicy
+                , ignoreDifferences = Some appConfig.ignoreDifferences
+                }
+            }
         : TypesUnion
