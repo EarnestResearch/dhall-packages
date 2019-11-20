@@ -1,18 +1,9 @@
-{ file =
-    ./io.argoproj.sensor.v1alpha1.FileArtifact.dhall
+{ file = ./io.argoproj.sensor.v1alpha1.FileArtifact.dhall
 , configmap =
     None ./../types/io.argoproj.sensor.v1alpha1.ConfigmapArtifact.dhall
-, git =
-    None ./../types/io.argoproj.sensor.v1alpha1.GitArtifact.dhall
-, inline =
-    None Text
-, resource =
-    -- k8s doesn't export definition of Unstructured type
-    -- see https://github.com/kubernetes/kubernetes/issues/85448
-    None https://prelude.dhall-lang.org/v11.1.0/JSON/Type
-    -- https://raw.githubusercontent.com/dhall-lang/dhall-kubernetes/fee24c0993ba0b20190e2fdb94e386b7fb67252d/types/io.k8s.apimachinery.pkg.apis.meta.v1.unstructured.Unstructured.dhall
-, s3 =
-    None ./../types/io.argoproj.common.S3Artifact.dhall
-, url =
-    None ./../types/io.argoproj.sensor.v1alpha1.URLArtifact.dhall
+, git = None ./../types/io.argoproj.sensor.v1alpha1.GitArtifact.dhall
+, inline = None Text
+, resource = None https://prelude.dhall-lang.org/v11.1.0/JSON/Type
+, s3 = None ./../types/io.argoproj.common.S3Artifact.dhall
+, url = None ./../types/io.argoproj.sensor.v1alpha1.URLArtifact.dhall
 }
