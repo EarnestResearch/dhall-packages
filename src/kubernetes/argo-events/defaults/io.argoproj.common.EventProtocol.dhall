@@ -1,5 +1,3 @@
-{ http =
-    ./io.argoproj.common.Http.dhall
-, nats =
-    ./io.argoproj.common.Nats.dhall
+{ http = ./io.argoproj.common.Http.dhall
+, nats = ./io.argoproj.common.Nats.dhall
 }
