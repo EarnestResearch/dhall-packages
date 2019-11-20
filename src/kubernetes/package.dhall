@@ -3,5 +3,6 @@
 , k8s = ./k8s/package.dhall
 , argocd = ./argocd/package.dhall
 , argo = ./argo/schemas.dhall
+, argo-events = ./argo-events/schemas.dhall
 , ambassador = ./ambassador/package.dhall
 }
