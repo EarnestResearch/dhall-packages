@@ -8,7 +8,7 @@
     ? ../Source/Type.dhall
 , ignoreDifferences :
     List
-      (   ../../Difference/Type.dhall sha256:34e396f57549c6855081ee922624f429efd83112e32b707017efdffe0ef6db7f
+      (   ../../Difference/Type.dhall sha256:68e73a7ed012e26329ba4951cec25efd6d138d1288af616b45f69e4d3f48a630
         ? ../../Difference/Type.dhall
       )
 , syncPolicy :

@@ -1,1 +1,6 @@
-{ group : Text, kind : Text, jsonPointers : List Text }
+{ group : Text
+, kind : Text
+, name : Optional Text
+, namespace : Optional Text
+, jsonPointers : List Text
+}

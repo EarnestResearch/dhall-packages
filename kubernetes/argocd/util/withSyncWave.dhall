@@ -14,7 +14,7 @@ let Application =
       ? ../Application/package.dhall
 
 let TypesUnion =
-        ../TypesUnion.dhall sha256:b4e4bdf2908414ae238ef26e14388ea6e74f401355412a2dc43ca6299e34f388
+        ../TypesUnion.dhall sha256:e1ec4a7e47e1182ee7f7308ddd397bfec0ebe4da9188f1a85ff7f062a68b9b71
       ? ../TypesUnion.dhall
 
 let withSyncWaveMetadata =

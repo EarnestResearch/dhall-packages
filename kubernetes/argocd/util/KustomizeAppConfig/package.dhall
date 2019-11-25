@@ -1,7 +1,7 @@
 { default =
-      ./default.dhall sha256:2340b8e1217a3a80f8bc0e90554d8de09ec47d59cab2cc8b9afa53be1ea12d88
+      ./default.dhall sha256:874988151d86abb6593f0d5c287365a67f96ed1d165151d69ffff70c09ad6a01
     ? ./default.dhall
 , Type =
-      ./Type.dhall sha256:9f0b1ccba8b4fd581b08f86ab6e2258ff653ad90de434d467b6504d16abe5269
+      ./Type.dhall sha256:4a3f8913366c0ac644abbb39626a3b2df997d07fc23a1754d262998c44d89908
     ? ./Type.dhall
 }
