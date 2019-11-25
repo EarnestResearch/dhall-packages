@@ -9,11 +9,11 @@ let TypesUnion =
       ? ../../TypesUnion.dhall
 
 let Application =
-        ../../Application/package.dhall sha256:47bd28e686730591bffb30ddb014ea47470bfd47b2cf3b2aff72fd79167f4089
+        ../../Application/package.dhall sha256:36ddc602d37556fed812b098dbd6efc22062e68418d6b6d2ce8a1f3ff9118067
       ? ../../Application/package.dhall
 
 let ApplicationSpec =
-        ../../ApplicationSpec/package.dhall sha256:c048e113b5a4ea3dd4406313697fa405b67a7d536b7ee806633884f0989eedfb
+        ../../ApplicationSpec/package.dhall sha256:1fad326e2263f4ee6aa646f576be7b900c8e9ff5b275f1076da2c0a0ea39095f
       ? ../../ApplicationSpec/package.dhall
 
 let SourceSpec =
