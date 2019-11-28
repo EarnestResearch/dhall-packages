@@ -1,7 +1,7 @@
 { Type =
-      ./../types/io.argoproj.sensor.v1alpha1.EventDependency.dhall sha256:2e475774c543fc6ca35b5874178b42b8676651f39af853dd00ced266b4150a2e
+      ./../types/io.argoproj.sensor.v1alpha1.EventDependency.dhall sha256:999968e4fec01dacd5adde195e67ec343538748208cb57d4d0cfa44d097f328e
     ? ./../types/io.argoproj.sensor.v1alpha1.EventDependency.dhall
 , default =
-      ./../defaults/io.argoproj.sensor.v1alpha1.EventDependency.dhall sha256:5bd22a999bc5e22cdbd16b5ae679b12ef15493144a1c1aa1f77712129518da3b
+      ./../defaults/io.argoproj.sensor.v1alpha1.EventDependency.dhall sha256:3a91f3a97ce99eb211e54c7b74eb56f05c0bcd85c9ccdbd6d90dacf0f90484c3
     ? ./../defaults/io.argoproj.sensor.v1alpha1.EventDependency.dhall
 }

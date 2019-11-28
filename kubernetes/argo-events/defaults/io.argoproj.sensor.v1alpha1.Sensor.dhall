@@ -1,7 +1,11 @@
 { spec =
-      ./io.argoproj.sensor.v1alpha1.SensorSpec.dhall sha256:6fbaa758420f8c09c0aadc40a2556d96c1614aa46e130a4ccfa71df4974281aa
+      ./io.argoproj.sensor.v1alpha1.SensorSpec.dhall sha256:e3462106e552d0d338751b4defdb77d8665d453623666d3f1a77e7d984f2adbf
     ? ./io.argoproj.sensor.v1alpha1.SensorSpec.dhall
 , status =
-      ./io.argoproj.sensor.v1alpha1.SensorStatus.dhall sha256:59051ce560a6037df40185235ededfa2ac4ff759b9000b2a6e60912a2b1af9f7
-    ? ./io.argoproj.sensor.v1alpha1.SensorStatus.dhall
+    None
+      (   ../types/io.argoproj.sensor.v1alpha1.SensorStatus.dhall sha256:a7a5b93d43239663c5da523754c1a34d8e58172a934370427253c2a96dfc0acc
+        ? ../types/io.argoproj.sensor.v1alpha1.SensorStatus.dhall
+      )
+, apiVersion = "argoproj.io/v1alpha1"
+, kind = "Sensor"
 }

@@ -1,7 +1,7 @@
 { Type =
-      ./../types/io.argoproj.common.EventProtocol.dhall sha256:64208d24bb507038a09600980ab0f365954978cfe5fa8cecf92f01a7c01448f5
+      ./../types/io.argoproj.common.EventProtocol.dhall sha256:d0232a19cbeb035060087cbf4924b412e02c6677b08e4223d24dccf412dd5ff5
     ? ./../types/io.argoproj.common.EventProtocol.dhall
 , default =
-      ./../defaults/io.argoproj.common.EventProtocol.dhall sha256:595717e9898866ffc565bbba97992241804679d9af1b2ae7240eb92edafb4377
+      ./../defaults/io.argoproj.common.EventProtocol.dhall sha256:65823d7a1d46ecb511dc3e55892be011e726346b6b7a436258d783490b36ba5a
     ? ./../defaults/io.argoproj.common.EventProtocol.dhall
 }

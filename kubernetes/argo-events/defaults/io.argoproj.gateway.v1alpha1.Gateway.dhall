@@ -1,7 +1,11 @@
 { spec =
-      ./io.argoproj.gateway.v1alpha1.GatewaySpec.dhall sha256:128ac3e5d79c499300f775399bc169d907dca8ac0fd2ef5abad81785e903e296
+      ./io.argoproj.gateway.v1alpha1.GatewaySpec.dhall sha256:61e874bcd031ed04e2eec8184a6a8130fef3ca0687785a81dd9b92c0dd29c7a2
     ? ./io.argoproj.gateway.v1alpha1.GatewaySpec.dhall
 , status =
-      ./io.argoproj.gateway.v1alpha1.GatewayStatus.dhall sha256:ba4a4f9c5d5e54b27331ae0cd65231690118b797c19754adb6ba780ea3f02354
-    ? ./io.argoproj.gateway.v1alpha1.GatewayStatus.dhall
+    None
+      (   ../types/io.argoproj.gateway.v1alpha1.GatewayStatus.dhall sha256:f9c4c6302fdf182c86abc417040942701b3dd7d526105914793262d229398cf5
+        ? ../types/io.argoproj.gateway.v1alpha1.GatewayStatus.dhall
+      )
+, apiVersion = "argoproj.io/v1alpha1"
+, kind = "Gateway"
 }

@@ -1,7 +1,7 @@
 { Type =
-      ./../types/io.argoproj.gateway.v1alpha1.Gateway.dhall sha256:099f71ccd7350834abc4cc7887e10fff3d192cc0598d6e73335606b11691c1d5
+      ./../types/io.argoproj.gateway.v1alpha1.Gateway.dhall sha256:eaef66a79ed76dfd4b84726568eacbf64e00e445b12f31d73960f8865676309a
     ? ./../types/io.argoproj.gateway.v1alpha1.Gateway.dhall
 , default =
-      ./../defaults/io.argoproj.gateway.v1alpha1.Gateway.dhall sha256:8c5173622a53c1c96cbc7d81a25850ca26a7a006443599d3ef7459a257aad754
+      ./../defaults/io.argoproj.gateway.v1alpha1.Gateway.dhall sha256:5bbf5dd600bc192950a95ff043d4b4e58975ffbf3352514a9c095dfae15a5321
     ? ./../defaults/io.argoproj.gateway.v1alpha1.Gateway.dhall
 }

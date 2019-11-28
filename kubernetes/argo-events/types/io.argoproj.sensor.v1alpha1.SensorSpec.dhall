@@ -1,6 +1,6 @@
 { dependencies :
     List
-      (   ./io.argoproj.sensor.v1alpha1.EventDependency.dhall sha256:2e475774c543fc6ca35b5874178b42b8676651f39af853dd00ced266b4150a2e
+      (   ./io.argoproj.sensor.v1alpha1.EventDependency.dhall sha256:999968e4fec01dacd5adde195e67ec343538748208cb57d4d0cfa44d097f328e
         ? ./io.argoproj.sensor.v1alpha1.EventDependency.dhall
       )
 , dependencyGroups :
@@ -9,14 +9,14 @@
         ? ./io.argoproj.sensor.v1alpha1.DependencyGroup.dhall
       )
 , eventProtocol :
-      ./io.argoproj.common.EventProtocol.dhall sha256:64208d24bb507038a09600980ab0f365954978cfe5fa8cecf92f01a7c01448f5
+      ./io.argoproj.common.EventProtocol.dhall sha256:d0232a19cbeb035060087cbf4924b412e02c6677b08e4223d24dccf412dd5ff5
     ? ./io.argoproj.common.EventProtocol.dhall
 , template :
       https://raw.githubusercontent.com/dhall-lang/dhall-kubernetes/fee24c0993ba0b20190e2fdb94e386b7fb67252d/types/io.k8s.api.core.v1.PodTemplateSpec.dhall sha256:4d56cb0fb1f61ae6aee0a0dd0da929c7caa3275a0b2cb83aedfe7d67b3797aca
     ? https://raw.githubusercontent.com/dhall-lang/dhall-kubernetes/fee24c0993ba0b20190e2fdb94e386b7fb67252d/types/io.k8s.api.core.v1.PodTemplateSpec.dhall
 , triggers :
     List
-      (   ./io.argoproj.sensor.v1alpha1.Trigger.dhall sha256:ef1d89439d9348e29c0b93fdb4ede786a6b7e6ebcda4cccbaa581f5051f1ee2e
+      (   ./io.argoproj.sensor.v1alpha1.Trigger.dhall sha256:b299619204344298bf28313fd49730e1fe2ed4bcff2e969d44ca70e5a03f950d
         ? ./io.argoproj.sensor.v1alpha1.Trigger.dhall
       )
 , circuit : Optional Text

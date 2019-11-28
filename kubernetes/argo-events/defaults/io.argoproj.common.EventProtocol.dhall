@@ -1,7 +1,11 @@
 { http =
-      ./io.argoproj.common.Http.dhall sha256:9bb9dcb5bf6f795291686f59383bcd01c8e79b87fc3fb63351d46dea100ac51b
-    ? ./io.argoproj.common.Http.dhall
+    None
+      (   ../types/io.argoproj.common.Http.dhall sha256:008bbd365377a850574776abce886a072765a967b876e492c1c51afab13f2e19
+        ? ../types/io.argoproj.common.Http.dhall
+      )
 , nats =
-      ./io.argoproj.common.Nats.dhall sha256:70a1d83d7c4d9313eb7a93bc54e3f76f176fb419b3cd22d1efd05afe6502b852
-    ? ./io.argoproj.common.Nats.dhall
+    None
+      (   ../types/io.argoproj.common.Nats.dhall sha256:ffacddff3a7a785e889ac7c8f70baaeb41172d747f508ccd648239628aa65e3a
+        ? ../types/io.argoproj.common.Nats.dhall
+      )
 }
