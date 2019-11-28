@@ -1,7 +1,7 @@
 { Type =
-      ./../types/io.argoproj.sensor.v1alpha1.Trigger.dhall sha256:ef1d89439d9348e29c0b93fdb4ede786a6b7e6ebcda4cccbaa581f5051f1ee2e
+      ./../types/io.argoproj.sensor.v1alpha1.Trigger.dhall sha256:b299619204344298bf28313fd49730e1fe2ed4bcff2e969d44ca70e5a03f950d
     ? ./../types/io.argoproj.sensor.v1alpha1.Trigger.dhall
 , default =
-      ./../defaults/io.argoproj.sensor.v1alpha1.Trigger.dhall sha256:f002b3a5e5458a2d5c718b36927cd20f7b24a0526b28385d50a082d6f05f52d3
+      ./../defaults/io.argoproj.sensor.v1alpha1.Trigger.dhall sha256:0fc4f1e2c85a533bcb0ce00418a7d90577729d5fe5dc88d4e7bab95e20f727fd
     ? ./../defaults/io.argoproj.sensor.v1alpha1.Trigger.dhall
 }

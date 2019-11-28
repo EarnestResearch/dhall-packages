@@ -5,7 +5,7 @@
       ./defaults/io.argoproj.common.EventContext.dhall sha256:249fd30975e15f45351d054cdcca8ed4fb264e8d3fe43a857f6637bb82080b7a
     ? ./defaults/io.argoproj.common.EventContext.dhall
 , EventProtocol =
-      ./defaults/io.argoproj.common.EventProtocol.dhall sha256:595717e9898866ffc565bbba97992241804679d9af1b2ae7240eb92edafb4377
+      ./defaults/io.argoproj.common.EventProtocol.dhall sha256:65823d7a1d46ecb511dc3e55892be011e726346b6b7a436258d783490b36ba5a
     ? ./defaults/io.argoproj.common.EventProtocol.dhall
 , Http =
       ./defaults/io.argoproj.common.Http.dhall sha256:9bb9dcb5bf6f795291686f59383bcd01c8e79b87fc3fb63351d46dea100ac51b
@@ -29,16 +29,16 @@
       ./defaults/io.argoproj.common.URI.dhall sha256:9bb9dcb5bf6f795291686f59383bcd01c8e79b87fc3fb63351d46dea100ac51b
     ? ./defaults/io.argoproj.common.URI.dhall
 , Gateway =
-      ./defaults/io.argoproj.gateway.v1alpha1.Gateway.dhall sha256:8c5173622a53c1c96cbc7d81a25850ca26a7a006443599d3ef7459a257aad754
+      ./defaults/io.argoproj.gateway.v1alpha1.Gateway.dhall sha256:5bbf5dd600bc192950a95ff043d4b4e58975ffbf3352514a9c095dfae15a5321
     ? ./defaults/io.argoproj.gateway.v1alpha1.Gateway.dhall
 , GatewayList =
-      ./defaults/io.argoproj.gateway.v1alpha1.GatewayList.dhall sha256:96a6c5cb95450e19e7c808deac66afa1224795ec16b6b2ca4787a6514f4d0536
+      ./defaults/io.argoproj.gateway.v1alpha1.GatewayList.dhall sha256:60aafe16c9922a28918284b77bffe37aac4646afd831936ab3233fb5f8d9d640
     ? ./defaults/io.argoproj.gateway.v1alpha1.GatewayList.dhall
 , GatewayNotificationWatcher =
       ./defaults/io.argoproj.gateway.v1alpha1.GatewayNotificationWatcher.dhall sha256:ffe97f63e5bc2a49da3738cfabf980f1cfed5d0df38c2d9c37f7e7b43caddf9e
     ? ./defaults/io.argoproj.gateway.v1alpha1.GatewayNotificationWatcher.dhall
 , GatewaySpec =
-      ./defaults/io.argoproj.gateway.v1alpha1.GatewaySpec.dhall sha256:128ac3e5d79c499300f775399bc169d907dca8ac0fd2ef5abad81785e903e296
+      ./defaults/io.argoproj.gateway.v1alpha1.GatewaySpec.dhall sha256:61e874bcd031ed04e2eec8184a6a8130fef3ca0687785a81dd9b92c0dd29c7a2
     ? ./defaults/io.argoproj.gateway.v1alpha1.GatewaySpec.dhall
 , GatewayStatus =
       ./defaults/io.argoproj.gateway.v1alpha1.GatewayStatus.dhall sha256:ba4a4f9c5d5e54b27331ae0cd65231690118b797c19754adb6ba780ea3f02354
@@ -65,10 +65,10 @@
       ./defaults/io.argoproj.sensor.v1alpha1.DependencyGroup.dhall sha256:6bb64768081e4095eeb17757a1bb5843da2eb6e07ab036f7fb4b7d8de90f64bd
     ? ./defaults/io.argoproj.sensor.v1alpha1.DependencyGroup.dhall
 , EventDependency =
-      ./defaults/io.argoproj.sensor.v1alpha1.EventDependency.dhall sha256:5bd22a999bc5e22cdbd16b5ae679b12ef15493144a1c1aa1f77712129518da3b
+      ./defaults/io.argoproj.sensor.v1alpha1.EventDependency.dhall sha256:3a91f3a97ce99eb211e54c7b74eb56f05c0bcd85c9ccdbd6d90dacf0f90484c3
     ? ./defaults/io.argoproj.sensor.v1alpha1.EventDependency.dhall
 , EventDependencyFilter =
-      ./defaults/io.argoproj.sensor.v1alpha1.EventDependencyFilter.dhall sha256:d246d77f397c20815b1a74318ff35c9ca14d4a2a42aac00570424886d1bd46eb
+      ./defaults/io.argoproj.sensor.v1alpha1.EventDependencyFilter.dhall sha256:38fa3ee91e63c594cd6aa8eafd9159472380b45f70474cfb271ecc06d40b0979
     ? ./defaults/io.argoproj.sensor.v1alpha1.EventDependencyFilter.dhall
 , FileArtifact =
       ./defaults/io.argoproj.sensor.v1alpha1.FileArtifact.dhall sha256:c3720062b9d3e2f4e6da3f1ca38f284725a2f80cdbcf01bf4538449121714abf
@@ -83,13 +83,13 @@
       ./defaults/io.argoproj.sensor.v1alpha1.GitRemoteConfig.dhall sha256:8000f8ee7cb045d64c704fbc640994ca0f0ccf3abae84701a77b94d44bea06c8
     ? ./defaults/io.argoproj.sensor.v1alpha1.GitRemoteConfig.dhall
 , Sensor =
-      ./defaults/io.argoproj.sensor.v1alpha1.Sensor.dhall sha256:9c9d8e8d1c1615b676e7ded7680cd3b3dbf37bb168b19d74ee4ff6d83cd95ea5
+      ./defaults/io.argoproj.sensor.v1alpha1.Sensor.dhall sha256:57720130c88127c6cdb70df702be5fd27b6b5b09cab9a29c30e470eac1a62668
     ? ./defaults/io.argoproj.sensor.v1alpha1.Sensor.dhall
 , SensorList =
-      ./defaults/io.argoproj.sensor.v1alpha1.SensorList.dhall sha256:58edad8bc62f024a186adb8675c767935cdc6bcdf66356b0e2fd72791ee61d41
+      ./defaults/io.argoproj.sensor.v1alpha1.SensorList.dhall sha256:e6f1134688b164d76ba1997ddb61773d276fb5dd308313ed4965669fd1e1fc06
     ? ./defaults/io.argoproj.sensor.v1alpha1.SensorList.dhall
 , SensorSpec =
-      ./defaults/io.argoproj.sensor.v1alpha1.SensorSpec.dhall sha256:6fbaa758420f8c09c0aadc40a2556d96c1614aa46e130a4ccfa71df4974281aa
+      ./defaults/io.argoproj.sensor.v1alpha1.SensorSpec.dhall sha256:e3462106e552d0d338751b4defdb77d8665d453623666d3f1a77e7d984f2adbf
     ? ./defaults/io.argoproj.sensor.v1alpha1.SensorSpec.dhall
 , SensorStatus =
       ./defaults/io.argoproj.sensor.v1alpha1.SensorStatus.dhall sha256:59051ce560a6037df40185235ededfa2ac4ff759b9000b2a6e60912a2b1af9f7
@@ -98,7 +98,7 @@
       ./defaults/io.argoproj.sensor.v1alpha1.TimeFilter.dhall sha256:b5bbef78ff0556b19f97a49f961d3aeb6a1d814357079d35dc2c6041b029f73e
     ? ./defaults/io.argoproj.sensor.v1alpha1.TimeFilter.dhall
 , Trigger =
-      ./defaults/io.argoproj.sensor.v1alpha1.Trigger.dhall sha256:f002b3a5e5458a2d5c718b36927cd20f7b24a0526b28385d50a082d6f05f52d3
+      ./defaults/io.argoproj.sensor.v1alpha1.Trigger.dhall sha256:0fc4f1e2c85a533bcb0ce00418a7d90577729d5fe5dc88d4e7bab95e20f727fd
     ? ./defaults/io.argoproj.sensor.v1alpha1.Trigger.dhall
 , TriggerCondition =
       ./defaults/io.argoproj.sensor.v1alpha1.TriggerCondition.dhall sha256:491674da73da706232edcad38dc05eca28882d2944a4aebcf552cda873ed9564

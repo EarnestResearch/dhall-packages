@@ -1,5 +1,5 @@
 { eventProtocol :
-      ./io.argoproj.common.EventProtocol.dhall sha256:64208d24bb507038a09600980ab0f365954978cfe5fa8cecf92f01a7c01448f5
+      ./io.argoproj.common.EventProtocol.dhall sha256:d0232a19cbeb035060087cbf4924b412e02c6677b08e4223d24dccf412dd5ff5
     ? ./io.argoproj.common.EventProtocol.dhall
 , processorPort : Text
 , template :

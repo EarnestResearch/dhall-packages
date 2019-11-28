@@ -1,5 +1,5 @@
 { eventProtocol =
-      ./io.argoproj.common.EventProtocol.dhall sha256:595717e9898866ffc565bbba97992241804679d9af1b2ae7240eb92edafb4377
+      ./io.argoproj.common.EventProtocol.dhall sha256:65823d7a1d46ecb511dc3e55892be011e726346b6b7a436258d783490b36ba5a
     ? ./io.argoproj.common.EventProtocol.dhall
 , eventSource = None Text
 , service =

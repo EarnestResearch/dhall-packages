@@ -1,4 +1,4 @@
-{ policy = ./io.argoproj.sensor.v1alpha1.TriggerPolicy.dhall
+{ policy = None ../types/io.argoproj.sensor.v1alpha1.TriggerPolicy.dhall
 , resourceParameters =
     [] : List ./../types/io.argoproj.sensor.v1alpha1.TriggerParameter.dhall
 , template = ./io.argoproj.sensor.v1alpha1.TriggerTemplate.dhall

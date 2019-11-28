@@ -1,7 +1,7 @@
 { Type =
-      ./../types/io.argoproj.sensor.v1alpha1.SensorSpec.dhall sha256:f2653ec82c96e9273ebd754c21d88f733104689f09f24ffbfb38f4f232699608
+      ./../types/io.argoproj.sensor.v1alpha1.SensorSpec.dhall sha256:8b756e4e5c7acc74e859e4a560b88bdb462ecfbf2dc70da687747c00ec466200
     ? ./../types/io.argoproj.sensor.v1alpha1.SensorSpec.dhall
 , default =
-      ./../defaults/io.argoproj.sensor.v1alpha1.SensorSpec.dhall sha256:6fbaa758420f8c09c0aadc40a2556d96c1614aa46e130a4ccfa71df4974281aa
+      ./../defaults/io.argoproj.sensor.v1alpha1.SensorSpec.dhall sha256:e3462106e552d0d338751b4defdb77d8665d453623666d3f1a77e7d984f2adbf
     ? ./../defaults/io.argoproj.sensor.v1alpha1.SensorSpec.dhall
 }

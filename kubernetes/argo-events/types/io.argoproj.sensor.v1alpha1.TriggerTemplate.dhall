@@ -7,4 +7,7 @@
       (   ./io.argoproj.sensor.v1alpha1.TriggerCondition.dhall sha256:4e394f7cb18c49fb976986624236a3134cbb5c073cf57c880f85b30f41339ee2
         ? ./io.argoproj.sensor.v1alpha1.TriggerCondition.dhall
       )
+, group : Text
+, version : Text
+, resource : Text
 }

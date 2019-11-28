@@ -5,8 +5,10 @@
       )
 , name : Text
 , time :
-      ./io.argoproj.sensor.v1alpha1.TimeFilter.dhall sha256:08b2e66593f50b2f8d059b80a2fe8b010c866918df8e8f61f5c65eb42061459b
-    ? ./io.argoproj.sensor.v1alpha1.TimeFilter.dhall
+    Optional
+      (   ./io.argoproj.sensor.v1alpha1.TimeFilter.dhall sha256:08b2e66593f50b2f8d059b80a2fe8b010c866918df8e8f61f5c65eb42061459b
+        ? ./io.argoproj.sensor.v1alpha1.TimeFilter.dhall
+      )
 , context :
     Optional
       (   ./io.argoproj.common.EventContext.dhall sha256:5498b0a1675bbc617e96443115ac9911412a092930feb4e958ef995153fc4a1b

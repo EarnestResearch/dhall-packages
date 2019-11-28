@@ -1,4 +1,4 @@
-{ http : ./io.argoproj.common.Http.dhall
-, nats : ./io.argoproj.common.Nats.dhall
+{ http : Optional ./io.argoproj.common.Http.dhall
+, nats : Optional ./io.argoproj.common.Nats.dhall
 , type : Text
 }
