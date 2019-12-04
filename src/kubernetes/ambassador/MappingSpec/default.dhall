@@ -31,7 +31,7 @@ in  { add_linkerd_headers = None Bool
     , auto_host_rewrite = None Bool
     , case_sensitive = None Bool
     , host_redirect = None Bool
-    , path_redirect = None Bool
+    , path_redirect = None Text
     , precedence = None Integer
     , bypass_auth = None Bool
     }
