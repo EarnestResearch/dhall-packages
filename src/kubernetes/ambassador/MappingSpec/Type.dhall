@@ -38,7 +38,7 @@ in  { prefix : Text
     , auto_host_rewrite : Optional Bool
     , case_sensitive : Optional Bool
     , host_redirect : Optional Bool
-    , path_redirect : Optional Bool
+    , path_redirect : Optional Text
     , precedence : Optional Integer
     , bypass_auth : Optional Bool
     }
