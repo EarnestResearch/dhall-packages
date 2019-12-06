@@ -1,1 +1,0 @@
-{ kind : Text, group : Text }

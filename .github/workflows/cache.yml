@@ -14,7 +14,7 @@ jobs:
     steps:
     - uses: actions/checkout@v1
     - name: Download dhall
-      run: curl -sSL https://github.com/dhall-lang/dhall-haskell/releases/download/1.27.0/dhall-1.27.0-x86_64-linux.tar.bz2 | tar -xj  -C .
+      run: curl -sSL https://github.com/dhall-lang/dhall-haskell/releases/download/1.28.0/dhall-1.28.0-x86_64-linux.tar.bz2 | tar -xj  -C .
     - name: check code
       run: |
         export XDG_CACHE_HOME=$PWD/cache

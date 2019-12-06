@@ -1,1 +1,0 @@
-{ server : Text, namespace : Text }

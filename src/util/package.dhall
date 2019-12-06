@@ -1,1 +1,0 @@
-{ CronTab = ./CronTab/package.dhall }
