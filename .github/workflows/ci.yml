@@ -17,4 +17,4 @@ jobs:
     - name: check formatting
       run: find . -name '*.dhall' | xargs -n 1 bin/dhall --ascii format --check --inplace
     - name: compute diff
-      run: dhall diff ./package.dhall https://raw.githubusercontent.com/EarnestResearch/dhall-packages/master/package.dhall
+      run: bin/dhall diff ./package.dhall https://raw.githubusercontent.com/EarnestResearch/dhall-packages/master/package.dhall
