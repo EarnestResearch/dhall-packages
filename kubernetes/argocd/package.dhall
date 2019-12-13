@@ -13,6 +13,9 @@
 , Difference =
       ./Difference/package.dhall sha256:51b0dc8cf017e203816d82de76ccd18e786e2e72b101c53ee12194f48d119d53
     ? ./Difference/package.dhall
+, DirectorySourceSpec =
+      ./DirectorySourceSpec/package.dhall sha256:32e62abea32fabf58a8539586c25f93ad355756a52f592d817690eddc8bc057f
+    ? ./DirectorySourceSpec/package.dhall
 , HelmSourceSpec =
       ./HelmSourceSpec/package.dhall sha256:380ded7e9ccb3e786facd647fd0d28bb6df20b9dce93e194413b7f6968a39a53
     ? ./HelmSourceSpec/package.dhall
