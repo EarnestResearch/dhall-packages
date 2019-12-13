@@ -1,4 +1,4 @@
 { CronTab =
-      ./CronTab/package.dhall sha256:0e38ee5c60705ed2acbcd80947555abb6c2f7092c3956891b3ad4b2e2d6fef00
+      ./CronTab/package.dhall sha256:e6a2fd6070196abc24cf0e4f77100a972710075ac43458ff09bf0619abb45ddc
     ? ./CronTab/package.dhall
 }
