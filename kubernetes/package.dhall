@@ -8,7 +8,7 @@
       ./k8s/package.dhall sha256:4159b87d109cd88610c9d440701091d6fdd718d81aba5691e2d6ed7c93fbcd09
     ? ./k8s/package.dhall
 , argocd =
-      ./argocd/package.dhall sha256:da3664e8a089162f27db3d2d552f08e11b923d8546853f20e13f5b9a6d7b26c6
+      ./argocd/package.dhall sha256:37659a96e878f98fa6643ec2db53c17dfc9cc388c3a445a979e0310be12e6611
     ? ./argocd/package.dhall
 , argo =
       ./argo/package.dhall sha256:72c8a8f37f102ba5bff6bf68885d2c8f53817dfa4215b702bb9c544582048fa6
