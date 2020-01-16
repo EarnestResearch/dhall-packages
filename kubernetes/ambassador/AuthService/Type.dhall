@@ -8,7 +8,8 @@ let k8s =
       ? ../../k8s/1.14.dhall
 
 in  { apiVersion : Text
-    , kind : k8s.ObjectMeta.Type
+    , kind : Text
+    , metadata : k8s.ObjectMeta.Type
     , spec :
           ../AuthServiceSpec/Type.dhall sha256:0088513c5510633ccf632eb63d54fffb7a8236294258f8b50167a0b52d007181
         ? ../AuthServiceSpec/Type.dhall
