@@ -11,10 +11,12 @@ jobs:
     steps:
     - uses: actions/checkout@v1
     - name: Download dhall
-      run: curl -sSL https://github.com/dhall-lang/dhall-haskell/releases/download/1.28.0/dhall-1.28.0-x86_64-linux.tar.bz2 | tar -xj  -C .
+      run: |
+        curl -sSL https://github.com/dhall-lang/dhall-haskell/releases/download/1.28.0/dhall-1.28.0-x86_64-linux.tar.bz2 | tar -xj  -C .
+        sudo mv bin/dhall /usr/local/bin/dhall
     - name: check code
-      run: bin/dhall <<< ./package.dhall
+      run: dhall <<< ./package.dhall
     - name: check formatting
-      run: find . -name '*.dhall' | xargs -n 1 bin/dhall --ascii format --check --inplace
+      run: find . -name '*.dhall' | xargs -n 1 dhall --ascii format --check --inplace
     - name: compute diff
-      run: bin/dhall diff ./package.dhall https://raw.githubusercontent.com/EarnestResearch/dhall-packages/master/package.dhall || true
+      run: make diff || true
