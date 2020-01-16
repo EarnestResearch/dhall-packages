@@ -11,8 +11,8 @@
       ./SystemManagerExternalData/package.dhall sha256:4af8373b25d3ddaaf9d90aa0e47412f18b621b3f09473a2270dd905082d51465
     ? ./SystemManagerExternalData/package.dhall
 , SecretDescriptor =
-      ./SecretDescriptor.dhall sha256:d617a70cb22e811f5b6669b856cf37961d9ea5fb897496a3af01f5cb019c5951
-    ? ./SecretDescriptor.dhall
+      ./SecretDescriptor/Type.dhall sha256:d617a70cb22e811f5b6669b856cf37961d9ea5fb897496a3af01f5cb019c5951
+    ? ./SecretDescriptor/Type.dhall
 , SecretsManagerSecretDescriptor =
       ./SecretsManagerSecretDescriptor/package.dhall sha256:32f2072161a250f6797032bb26d903001ccd570301539d30b50a67431f97f44c
     ? ./SecretsManagerSecretDescriptor/package.dhall
