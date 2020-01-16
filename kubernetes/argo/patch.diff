@@ -2957,7 +2957,7 @@ index 0000000..36b9cdc
 @@ -0,0 +1,3 @@
 +(   ../../k8s/package.dhall sha256:4c9c40f1762e95578c86c3efbccb87ce74ff67c5111a4c92c4393c6d163bb51b
 +  ? ../../k8s/package.dhall
-+).types.Affinity
+.Affinity.Type
 diff --git a/kubernetes/argo/types/io.k8s.api.core.v1.ConfigMapKeySelector.dhall b/kubernetes/argo/types/io.k8s.api.core.v1.ConfigMapKeySelector.dhall
 new file mode 100644
 index 0000000..924bfeb
@@ -2966,7 +2966,7 @@ index 0000000..924bfeb
 @@ -0,0 +1,3 @@
 +(   ../../k8s/package.dhall sha256:4c9c40f1762e95578c86c3efbccb87ce74ff67c5111a4c92c4393c6d163bb51b
 +  ? ../../k8s/package.dhall
-+).types.ConfigMapKeySelector
+.ConfigMapKeySelector.Type
 diff --git a/kubernetes/argo/types/io.k8s.api.core.v1.Container.dhall b/kubernetes/argo/types/io.k8s.api.core.v1.Container.dhall
 new file mode 100644
 index 0000000..044db86
@@ -2975,7 +2975,7 @@ index 0000000..044db86
 @@ -0,0 +1,3 @@
 +(   ../../k8s/package.dhall sha256:4c9c40f1762e95578c86c3efbccb87ce74ff67c5111a4c92c4393c6d163bb51b
 +  ? ../../k8s/package.dhall
-+).types.Container
+.Container.Type
 diff --git a/kubernetes/argo/types/io.k8s.api.core.v1.ContainerPort.dhall b/kubernetes/argo/types/io.k8s.api.core.v1.ContainerPort.dhall
 new file mode 100644
 index 0000000..463926f
@@ -2984,7 +2984,7 @@ index 0000000..463926f
 @@ -0,0 +1,3 @@
 +(   ../../k8s/package.dhall sha256:4c9c40f1762e95578c86c3efbccb87ce74ff67c5111a4c92c4393c6d163bb51b
 +  ? ../../k8s/package.dhall
-+).types.ContainerPort
+.ContainerPort.Type
 diff --git a/kubernetes/argo/types/io.k8s.api.core.v1.EnvFromSource.dhall b/kubernetes/argo/types/io.k8s.api.core.v1.EnvFromSource.dhall
 new file mode 100644
 index 0000000..7450501
@@ -2993,7 +2993,7 @@ index 0000000..7450501
 @@ -0,0 +1,3 @@
 +(   ../../k8s/package.dhall sha256:4c9c40f1762e95578c86c3efbccb87ce74ff67c5111a4c92c4393c6d163bb51b
 +  ? ../../k8s/package.dhall
-+).types.EnvFromSource
+.EnvFromSource.Type
 diff --git a/kubernetes/argo/types/io.k8s.api.core.v1.EnvVar.dhall b/kubernetes/argo/types/io.k8s.api.core.v1.EnvVar.dhall
 new file mode 100644
 index 0000000..90fdb6a
@@ -3002,7 +3002,7 @@ index 0000000..90fdb6a
 @@ -0,0 +1,3 @@
 +(   ../../k8s/package.dhall sha256:4c9c40f1762e95578c86c3efbccb87ce74ff67c5111a4c92c4393c6d163bb51b
 +  ? ../../k8s/package.dhall
-+).types.EnvVar
+.EnvVar.Type
 diff --git a/kubernetes/argo/types/io.k8s.api.core.v1.Lifecycle.dhall b/kubernetes/argo/types/io.k8s.api.core.v1.Lifecycle.dhall
 new file mode 100644
 index 0000000..4e61aba
@@ -3011,7 +3011,7 @@ index 0000000..4e61aba
 @@ -0,0 +1,3 @@
 +(   ../../k8s/package.dhall sha256:4c9c40f1762e95578c86c3efbccb87ce74ff67c5111a4c92c4393c6d163bb51b
 +  ? ../../k8s/package.dhall
-+).types.Lifecycle
+.Lifecycle.Type
 diff --git a/kubernetes/argo/types/io.k8s.api.core.v1.LocalObjectReference.dhall b/kubernetes/argo/types/io.k8s.api.core.v1.LocalObjectReference.dhall
 new file mode 100644
 index 0000000..53fea9e
@@ -3020,7 +3020,7 @@ index 0000000..53fea9e
 @@ -0,0 +1,3 @@
 +(   ../../k8s/package.dhall sha256:4c9c40f1762e95578c86c3efbccb87ce74ff67c5111a4c92c4393c6d163bb51b
 +  ? ../../k8s/package.dhall
-+).types.LocalObjectReference
+.LocalObjectReference.Type
 diff --git a/kubernetes/argo/types/io.k8s.api.core.v1.PersistentVolumeClaim.dhall b/kubernetes/argo/types/io.k8s.api.core.v1.PersistentVolumeClaim.dhall
 new file mode 100644
 index 0000000..22479ad
@@ -3029,7 +3029,7 @@ index 0000000..22479ad
 @@ -0,0 +1,3 @@
 +(   ../../k8s/package.dhall sha256:4c9c40f1762e95578c86c3efbccb87ce74ff67c5111a4c92c4393c6d163bb51b
 +  ? ../../k8s/package.dhall
-+).types.PersistentVolumeClaim
+.PersistentVolumeClaim.Type
 diff --git a/kubernetes/argo/types/io.k8s.api.core.v1.PodDNSConfig.dhall b/kubernetes/argo/types/io.k8s.api.core.v1.PodDNSConfig.dhall
 new file mode 100644
 index 0000000..d7d75aa
@@ -3038,7 +3038,7 @@ index 0000000..d7d75aa
 @@ -0,0 +1,3 @@
 +(   ../../k8s/package.dhall sha256:4c9c40f1762e95578c86c3efbccb87ce74ff67c5111a4c92c4393c6d163bb51b
 +  ? ../../k8s/package.dhall
-+).types.PodDNSConfig
+.PodDNSConfig.Type
 diff --git a/kubernetes/argo/types/io.k8s.api.core.v1.Probe.dhall b/kubernetes/argo/types/io.k8s.api.core.v1.Probe.dhall
 new file mode 100644
 index 0000000..aa03daf
@@ -3047,7 +3047,7 @@ index 0000000..aa03daf
 @@ -0,0 +1,3 @@
 +(   ../../k8s/package.dhall sha256:4c9c40f1762e95578c86c3efbccb87ce74ff67c5111a4c92c4393c6d163bb51b
 +  ? ../../k8s/package.dhall
-+).types.Probe
+.Probe.Type
 diff --git a/kubernetes/argo/types/io.k8s.api.core.v1.ResourceRequirements.dhall b/kubernetes/argo/types/io.k8s.api.core.v1.ResourceRequirements.dhall
 new file mode 100644
 index 0000000..6265210
@@ -3056,7 +3056,7 @@ index 0000000..6265210
 @@ -0,0 +1,3 @@
 +(   ../../k8s/package.dhall sha256:4c9c40f1762e95578c86c3efbccb87ce74ff67c5111a4c92c4393c6d163bb51b
 +  ? ../../k8s/package.dhall
-+).types.ResourceRequirements
+.ResourceRequirements.Type
 diff --git a/kubernetes/argo/types/io.k8s.api.core.v1.SecretKeySelector.dhall b/kubernetes/argo/types/io.k8s.api.core.v1.SecretKeySelector.dhall
 new file mode 100644
 index 0000000..c9d01c2
@@ -3065,7 +3065,7 @@ index 0000000..c9d01c2
 @@ -0,0 +1,3 @@
 +(   ../../k8s/package.dhall sha256:4c9c40f1762e95578c86c3efbccb87ce74ff67c5111a4c92c4393c6d163bb51b
 +  ? ../../k8s/package.dhall
-+).types.SecretKeySelector
+.SecretKeySelector.Type
 diff --git a/kubernetes/argo/types/io.k8s.api.core.v1.SecurityContext.dhall b/kubernetes/argo/types/io.k8s.api.core.v1.SecurityContext.dhall
 new file mode 100644
 index 0000000..a6ff6a1
@@ -3074,7 +3074,7 @@ index 0000000..a6ff6a1
 @@ -0,0 +1,3 @@
 +(   ../../k8s/package.dhall sha256:4c9c40f1762e95578c86c3efbccb87ce74ff67c5111a4c92c4393c6d163bb51b
 +  ? ../../k8s/package.dhall
-+).types.SecurityContext
+.SecurityContext.Type
 diff --git a/kubernetes/argo/types/io.k8s.api.core.v1.Toleration.dhall b/kubernetes/argo/types/io.k8s.api.core.v1.Toleration.dhall
 new file mode 100644
 index 0000000..c75e2c2
@@ -3083,7 +3083,7 @@ index 0000000..c75e2c2
 @@ -0,0 +1,3 @@
 +(   ../../k8s/package.dhall sha256:4c9c40f1762e95578c86c3efbccb87ce74ff67c5111a4c92c4393c6d163bb51b
 +  ? ../../k8s/package.dhall
-+).types.Toleration
+.Toleration.Type
 diff --git a/kubernetes/argo/types/io.k8s.api.core.v1.Volume.dhall b/kubernetes/argo/types/io.k8s.api.core.v1.Volume.dhall
 new file mode 100644
 index 0000000..a101d31
@@ -3092,7 +3092,7 @@ index 0000000..a101d31
 @@ -0,0 +1,3 @@
 +(   ../../k8s/package.dhall sha256:4c9c40f1762e95578c86c3efbccb87ce74ff67c5111a4c92c4393c6d163bb51b
 +  ? ../../k8s/package.dhall
-+).types.Volume
+.Volume.Type
 diff --git a/kubernetes/argo/types/io.k8s.api.core.v1.VolumeDevice.dhall b/kubernetes/argo/types/io.k8s.api.core.v1.VolumeDevice.dhall
 new file mode 100644
 index 0000000..16442a6
@@ -3101,7 +3101,7 @@ index 0000000..16442a6
 @@ -0,0 +1,3 @@
 +(   ../../k8s/package.dhall sha256:4c9c40f1762e95578c86c3efbccb87ce74ff67c5111a4c92c4393c6d163bb51b
 +  ? ../../k8s/package.dhall
-+).types.VolumeDevice
+.VolumeDevice.Type
 diff --git a/kubernetes/argo/types/io.k8s.api.core.v1.VolumeMount.dhall b/kubernetes/argo/types/io.k8s.api.core.v1.VolumeMount.dhall
 new file mode 100644
 index 0000000..8f03b5b
@@ -3110,7 +3110,7 @@ index 0000000..8f03b5b
 @@ -0,0 +1,3 @@
 +(   ../../k8s/package.dhall sha256:4c9c40f1762e95578c86c3efbccb87ce74ff67c5111a4c92c4393c6d163bb51b
 +  ? ../../k8s/package.dhall
-+).types.VolumeMount
+.VolumeMount.Type
 diff --git a/kubernetes/argo/types/io.k8s.apimachinery.pkg.apis.meta.v1.ListMeta.dhall b/kubernetes/argo/types/io.k8s.apimachinery.pkg.apis.meta.v1.ListMeta.dhall
 new file mode 100644
 index 0000000..daa49d3
@@ -3119,7 +3119,7 @@ index 0000000..daa49d3
 @@ -0,0 +1,3 @@
 +(   ../../k8s/package.dhall sha256:4c9c40f1762e95578c86c3efbccb87ce74ff67c5111a4c92c4393c6d163bb51b
 +  ? ../../k8s/package.dhall
-+).types.ListMeta
+.ListMeta.Type
 diff --git a/kubernetes/argo/types/io.k8s.apimachinery.pkg.apis.meta.v1.ObjectMeta.dhall b/kubernetes/argo/types/io.k8s.apimachinery.pkg.apis.meta.v1.ObjectMeta.dhall
 new file mode 100644
 index 0000000..e536240
@@ -3128,7 +3128,7 @@ index 0000000..e536240
 @@ -0,0 +1,3 @@
 +(   ../../k8s/package.dhall sha256:4c9c40f1762e95578c86c3efbccb87ce74ff67c5111a4c92c4393c6d163bb51b
 +  ? ../../k8s/package.dhall
-+).types.ObjectMeta
+.ObjectMeta.Type
 diff --git a/kubernetes/argo/typesUnion.dhall b/kubernetes/argo/typesUnion.dhall
 index f462d2c..ab888b7 100644
 --- a/kubernetes/argo/typesUnion.dhall

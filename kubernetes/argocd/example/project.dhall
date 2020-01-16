@@ -1,15 +1,15 @@
 let argocd =
-        ../package.dhall sha256:07fd4ddd04738ba0c7c69e52ee963fcedb28995893f0f801dcf56098a9247ce3
+        ../package.dhall sha256:37659a96e878f98fa6643ec2db53c17dfc9cc388c3a445a979e0310be12e6611
       ? ../package.dhall
 
 let k8s =
-        ../../k8s/package.dhall sha256:4159b87d109cd88610c9d440701091d6fdd718d81aba5691e2d6ed7c93fbcd09
-      ? ../../k8s/package.dhall
+        ../../k8s/1.14.dhall sha256:7839bf40f940757e4d71d3c1b84d878f6a4873c3b2706ae4be307b5991acdcac
+      ? ../../k8s/1.14.dhall
 
 in  argocd.TypesUnion.Project
       argocd.Project::{
       , metadata =
-          k8s.schemas.ObjectMeta::{
+          k8s.ObjectMeta::{
           , name =
                 ./projectName.dhall sha256:d7e4e24f5750f02229d03a034faabf0f3378960c20170d83e78ab83c1131aded
               ? ./projectName.dhall

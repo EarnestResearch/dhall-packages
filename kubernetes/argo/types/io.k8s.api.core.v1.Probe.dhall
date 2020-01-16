@@ -1,3 +1,3 @@
-(   ../../k8s/package.dhall sha256:4159b87d109cd88610c9d440701091d6fdd718d81aba5691e2d6ed7c93fbcd09
-  ? ../../k8s/package.dhall
-).types.Probe
+(   ../../k8s/1.14.dhall sha256:7839bf40f940757e4d71d3c1b84d878f6a4873c3b2706ae4be307b5991acdcac
+  ? ../../k8s/1.14.dhall
+).Probe.Type
