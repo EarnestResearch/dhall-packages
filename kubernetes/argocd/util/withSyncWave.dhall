@@ -2,8 +2,8 @@
     Utility to add sync waves to argocd applications and projects.
 -}
 let k8s =
-        ../../k8s/package.dhall sha256:4159b87d109cd88610c9d440701091d6fdd718d81aba5691e2d6ed7c93fbcd09
-      ? ../../k8s/package.dhall
+        ../../k8s/1.14.dhall sha256:7839bf40f940757e4d71d3c1b84d878f6a4873c3b2706ae4be307b5991acdcac
+      ? ../../k8s/1.14.dhall
 
 let Project =
         ../Project/package.dhall sha256:43e36b1dc0eec92d602643cbee9b21bf5d27b8912cabf8d88a1776b5a5b1f7d8
@@ -19,7 +19,7 @@ let TypesUnion =
 
 let withSyncWaveMetadata =
           \(wave : Integer)
-      ->  \(metadata : k8s.types.ObjectMeta)
+      ->  \(metadata : k8s.ObjectMeta.Type)
       ->      metadata
           //  { annotations =
                     metadata.annotations

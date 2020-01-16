@@ -29,8 +29,8 @@ let PluginSpec =
       ? ../../PluginSpec/package.dhall
 
 let k8s =
-        ../../../k8s/package.dhall sha256:4159b87d109cd88610c9d440701091d6fdd718d81aba5691e2d6ed7c93fbcd09
-      ? ../../../k8s/package.dhall
+        ../../../k8s/1.14.dhall sha256:7839bf40f940757e4d71d3c1b84d878f6a4873c3b2706ae4be307b5991acdcac
+      ? ../../../k8s/1.14.dhall
 
 in      \ ( appConfig
           :   ../DhallAppConfig/Type.dhall sha256:b870b087d04ed906a4b912f2333e66fd43db05bdcea36740a6cd707a380b4a72
@@ -38,7 +38,7 @@ in      \ ( appConfig
           )
     ->    TypesUnion.Application
             Application::{
-            , metadata = k8s.schemas.ObjectMeta::{ name = appConfig.name }
+            , metadata = k8s.ObjectMeta::{ name = appConfig.name }
             , spec =
                 ApplicationSpec::{
                 , project = appConfig.project

@@ -23,8 +23,8 @@ let HelmSpec =
       ? ../../HelmSpec/package.dhall
 
 let k8s =
-        ../../../k8s/package.dhall sha256:4159b87d109cd88610c9d440701091d6fdd718d81aba5691e2d6ed7c93fbcd09
-      ? ../../../k8s/package.dhall
+        ../../../k8s/1.14.dhall sha256:7839bf40f940757e4d71d3c1b84d878f6a4873c3b2706ae4be307b5991acdcac
+      ? ../../../k8s/1.14.dhall
 
 in      \ ( appConfig
           :   ../HelmAppConfig/Type.dhall sha256:a58dc0d542f24958d2f4e4a208317531b749574a35cca08dbf123d059234a02e
@@ -32,7 +32,7 @@ in      \ ( appConfig
           )
     ->    TypesUnion.Application
             Application::{
-            , metadata = k8s.schemas.ObjectMeta::{ name = appConfig.name }
+            , metadata = k8s.ObjectMeta::{ name = appConfig.name }
             , spec =
                 ApplicationSpec::{
                 , project = appConfig.project
