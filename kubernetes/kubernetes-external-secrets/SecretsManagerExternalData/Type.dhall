@@ -1,1 +1,1 @@
-{ key : Text, name : Text, property : Text }
+{ key : Text, name : Text, property : Optional Text }
