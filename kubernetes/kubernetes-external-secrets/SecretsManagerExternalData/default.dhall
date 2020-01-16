@@ -1,1 +1,1 @@
-{=}
+{ property = None Text }
