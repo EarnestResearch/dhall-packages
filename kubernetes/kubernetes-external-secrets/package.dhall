@@ -5,7 +5,7 @@
       ./ExternalSecret/package.dhall sha256:1faeccea0701f13f5cf42dd76fa109f0a034e9c80ea9c2484cc0d8c6371c6578
     ? ./ExternalSecret/package.dhall
 , SecretsManagerExternalData =
-      ./SecretsManagerExternalData/package.dhall sha256:4fc3cc01529eb9817d773b75827f3fae1a96305e9dea1cfff40b710a81556377
+      ./SecretsManagerExternalData/package.dhall sha256:ce6b73c2cd3abbb9ed7395fdb9fc0e5caea061312813263c230a581fe19653ce
     ? ./SecretsManagerExternalData/package.dhall
 , SystemManagerExternalData =
       ./SystemManagerExternalData/package.dhall sha256:4af8373b25d3ddaaf9d90aa0e47412f18b621b3f09473a2270dd905082d51465
