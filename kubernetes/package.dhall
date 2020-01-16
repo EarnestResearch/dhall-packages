@@ -2,7 +2,7 @@
       ./cert-manager/package.dhall sha256:2f5a8a61e8259bf6d105cab504de2c7ec9a9f004c8c6e0c4a7e773595e800de3
     ? ./cert-manager/package.dhall
 , kubernetes-external-secrets =
-      ./kubernetes-external-secrets/package.dhall sha256:855cd3d8bf02162ebe2193711ccd35653b2b10f4fe7c81c3f0a42a369734bf29
+      ./kubernetes-external-secrets/package.dhall sha256:3b0df58d1d5dc7e8d5971ee06902d30b2eba9608c551779792ec2f3257c494cc
     ? ./kubernetes-external-secrets/package.dhall
 , k8s =
       ./k8s/package.dhall sha256:4b575d18387671adf3e3b1db4fe7fa6ff880c26c8c69082176b4ef84dee2e4d6

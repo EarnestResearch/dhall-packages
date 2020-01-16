@@ -6,4 +6,5 @@
       (   ../SecretsManagerExternalData/Type.dhall sha256:5b356dfacb979cfcb22842c1e73d2185c0f241ede4bcddc6f4614c35c1afae11
         ? ../SecretsManagerExternalData/Type.dhall
       )
+, dataFrom : List Text
 }
