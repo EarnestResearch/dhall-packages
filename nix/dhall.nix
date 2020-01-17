@@ -1,9 +1,9 @@
 { runCommand }:
-runCommand "dhall-1.28.0" {
+runCommand "dhall-1.29.0" {
   tarball = builtins.fetchTarball {
-    name = "dhall-1.28.0-archive";
-    url = https://github.com/dhall-lang/dhall-haskell/releases/download/1.28.0/dhall-1.28.0-x86_64-macos.tar.bz2;
-    sha256 = "1mc34j7gw74679560bfzkgvii39rnq5825z4i7pbljs9swv9jpqh";
+    name = "dhall-1.29.0-archive";
+    url = https://github.com/dhall-lang/dhall-haskell/releases/download/1.29.0/dhall-1.29.0-x86_64-macos.tar.bz2;
+    sha256 = "0impdrphm7wsm5i17dwyq12i1nrirq78n20kbjz68ahyrf1b8ld7";
   };
 }
 ''

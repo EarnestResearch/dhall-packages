@@ -39,24 +39,22 @@ in      \ ( appConfig
     ->    TypesUnion.Application
             Application::{
             , metadata = k8s.ObjectMeta::{ name = appConfig.name }
-            , spec =
-                ApplicationSpec::{
-                , project = appConfig.project
-                , source =
-                    SourceSpec.TypesUnion.Plugin
-                      PluginSourceSpec::{
-                      , repoURL = appConfig.source.url
-                      , path = appConfig.source.path
-                      , targetRevision = appConfig.source.targetRevision
-                      , plugin =
-                          PluginSpec::{
-                          , name = "dhall-to-yaml"
-                          , env = Some appConfig.parameters
-                          }
+            , spec = ApplicationSpec::{
+              , project = appConfig.project
+              , source =
+                  SourceSpec.TypesUnion.Plugin
+                    PluginSourceSpec::{
+                    , repoURL = appConfig.source.url
+                    , path = appConfig.source.path
+                    , targetRevision = appConfig.source.targetRevision
+                    , plugin = PluginSpec::{
+                      , name = "dhall-to-yaml"
+                      , env = Some appConfig.parameters
                       }
-                , destination = appConfig.destination
-                , syncPolicy = appConfig.syncPolicy
-                , ignoreDifferences = Some appConfig.ignoreDifferences
-                }
+                    }
+              , destination = appConfig.destination
+              , syncPolicy = appConfig.syncPolicy
+              , ignoreDifferences = Some appConfig.ignoreDifferences
+              }
             }
         : TypesUnion

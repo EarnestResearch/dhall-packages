@@ -33,25 +33,23 @@ in      \ ( appConfig
     ->    TypesUnion.Application
             Application::{
             , metadata = k8s.ObjectMeta::{ name = appConfig.name }
-            , spec =
-                ApplicationSpec::{
-                , project = appConfig.project
-                , source =
-                    SourceSpec.TypesUnion.Kustomize
-                      KustomizeSourceSpec::{
-                      , repoURL = appConfig.source.url
-                      , path = appConfig.source.path
-                      , targetRevision = appConfig.source.targetRevision
-                      , kustomize =
-                          KustomizeSpec::{
-                          , commonLabels = appConfig.commonLabels
-                          , images = appConfig.images
-                          , namePrefix = appConfig.namePrefix
-                          }
+            , spec = ApplicationSpec::{
+              , project = appConfig.project
+              , source =
+                  SourceSpec.TypesUnion.Kustomize
+                    KustomizeSourceSpec::{
+                    , repoURL = appConfig.source.url
+                    , path = appConfig.source.path
+                    , targetRevision = appConfig.source.targetRevision
+                    , kustomize = KustomizeSpec::{
+                      , commonLabels = appConfig.commonLabels
+                      , images = appConfig.images
+                      , namePrefix = appConfig.namePrefix
                       }
-                , destination = appConfig.destination
-                , syncPolicy = appConfig.syncPolicy
-                , ignoreDifferences = Some appConfig.ignoreDifferences
-                }
+                    }
+              , destination = appConfig.destination
+              , syncPolicy = appConfig.syncPolicy
+              , ignoreDifferences = Some appConfig.ignoreDifferences
+              }
             }
         : TypesUnion
