@@ -33,24 +33,22 @@ in      \ ( appConfig
     ->    TypesUnion.Application
             Application::{
             , metadata = k8s.ObjectMeta::{ name = appConfig.name }
-            , spec =
-                ApplicationSpec::{
-                , project = appConfig.project
-                , source =
-                    SourceSpec.TypesUnion.Helm
-                      HelmSourceSpec::{
-                      , repoURL = appConfig.source.url
-                      , path = appConfig.source.path
-                      , targetRevision = appConfig.source.targetRevision
-                      , helm =
-                          HelmSpec::{
-                          , valueFiles = Some appConfig.valueFiles
-                          , parameters = Some appConfig.parameters
-                          }
+            , spec = ApplicationSpec::{
+              , project = appConfig.project
+              , source =
+                  SourceSpec.TypesUnion.Helm
+                    HelmSourceSpec::{
+                    , repoURL = appConfig.source.url
+                    , path = appConfig.source.path
+                    , targetRevision = appConfig.source.targetRevision
+                    , helm = HelmSpec::{
+                      , valueFiles = Some appConfig.valueFiles
+                      , parameters = Some appConfig.parameters
                       }
-                , destination = appConfig.destination
-                , syncPolicy = appConfig.syncPolicy
-                , ignoreDifferences = Some appConfig.ignoreDifferences
-                }
+                    }
+              , destination = appConfig.destination
+              , syncPolicy = appConfig.syncPolicy
+              , ignoreDifferences = Some appConfig.ignoreDifferences
+              }
             }
         : TypesUnion
