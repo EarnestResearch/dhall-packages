@@ -1,0 +1,40 @@
+
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: argocd-repo-server
+spec:
+  template:
+    spec:
+      initContainers:
+      - name: download-dhall-tools
+        image: alpine:3.8
+        command:
+          - sh
+          - -c
+        args:
+          - wget -qO- https://github.com/dhall-lang/dhall-haskell/releases/download/1.29.0/dhall-json-1.6.1-x86_64-linux.tar.bz2 | tar -xjf - && cp bin/dhall-to-yaml tools/dhall-to-yaml
+        volumeMounts:
+          - mountPath: /tools
+            name: tools
+      - name: download-cache
+        image: alpine:3.8
+        command:
+          - sh
+          - -c
+        args:
+          - wget -qO- https://github.com/EarnestResearch/dhall-packages/releases/download/v0.9.0/cache.tgz | tar -xvf - && chmod 777 /cache/* && chmod 777 /cache/*/*
+        volumeMounts:
+          - mountPath: /cache
+            name: cache
+      containers:
+      - name: argocd-repo-server
+        volumeMounts:
+          - mountPath: /usr/local/bin/dhall-to-yaml
+            name: tools
+            subPath: dhall-to-yaml
+          - mountPath: /home/argocd/.cache
+            name: cache
+      volumes:
+      - name: tools
+      - name: cache

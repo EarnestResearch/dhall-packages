@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  labels:
+    app.kubernetes.io/part-of: argocd
+  name: argocd-cm
+data:
+  configManagementPlugins: |
+    - name: dhall-to-yaml
+      generate:
+        command: ["sh", "-c"]
+        args: ["if [ -z \"$VALUES_FILE\" ]; then echo \"./app.dhall\"; else echo \"./$VALUES_FILE\"; fi | dhall-to-yaml --omit-empty"]
