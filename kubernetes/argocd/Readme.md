@@ -7,9 +7,10 @@ To define a argocd [application](https://argoproj.github.io/argo-cd/operator-man
 
 ```dhall
 let argocd =
-      https://raw.githubusercontent.com/EarnestResearch/dhall-packages/kubernetes/argocd/package.dhall
+      https://raw.githubusercontent.com/EarnestResearch/dhall-packages/master/kubernetes/argocd/package.dhall
 
-let k8s = packages.kubernetes.k8s.schemas
+let k8s =
+      https://raw.githubusercontent.com/EarnestResearch/dhall-packages/master/kubernetes/k8s/1.14.dhall
 
 in  argocd.Application::{
     , metadata = k8s.ObjectMeta::{ name = "guestbook" }
