@@ -14,12 +14,12 @@ let k8s =
 
 in  ambassador.Mapping::{
     , metadata = k8s.ObjectMeta::{ name = "guestbook" }
-    , spec =
-        ambassador.MappingSpec::{
-        , prefix = "/guestbook/"
-        , service = "guestbook.default:80"
-        }
+    , spec = ambassador.MappingSpec::{
+      , prefix = "/guestbook/"
+      , service = "guestbook.default:80"
+      }
     }
+
 ```
 
 You can leverage dhall's capabilities and tie the mapping to the service definition as well, for example you can do:
@@ -39,27 +39,27 @@ let port = 80
 
 let service =
       k8s.Service::{
-      , metadata =
-          k8s.ObjectMeta::{ name = appName, namespace = Some namespace }
-      , spec =
-          Some
-            k8s.ServiceSpec::{
-            , selector = toMap { app = appName }
-            , ports =
-                [ k8s.ServicePort::{
-                  , targetPort = Some (k8s.IntOrString.Int 8080)
-                  , port = port
-                  }
-                ]
+      , metadata = k8s.ObjectMeta::{
+        , name = appName
+        , namespace = Some namespace
+        }
+      , spec = Some k8s.ServiceSpec::{
+        , selector = toMap { app = appName }
+        , ports =
+          [ k8s.ServicePort::{
+            , targetPort = Some (k8s.IntOrString.Int 8080)
+            , port = port
             }
+          ]
+        }
       }
 
 in  ambassador.Mapping::{
     , metadata = k8s.ObjectMeta::{ name = service.metadata.name }
-    , spec =
-        ambassador.MappingSpec::{
-        , prefix = "/${appName}/"
-        , service = "${appName}.${namespace}:${Natural/show port}"
-        }
+    , spec = ambassador.MappingSpec::{
+      , prefix = "/${appName}/"
+      , service = "${appName}.${namespace}:${Natural/show port}"
+      }
     }
+
 ```

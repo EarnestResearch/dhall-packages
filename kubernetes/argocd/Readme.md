@@ -14,22 +14,19 @@ let k8s =
 
 in  argocd.Application::{
     , metadata = k8s.ObjectMeta::{ name = "guestbook" }
-    , spec =
-        argocd.ApplicationSpec::{
-        , project = "default"
-        , source =
-            argocd.SourceSpec.TypesUnion.Directory
-              argocd.DirectorySourceSpec::{
-              , repoURL =
-                  "https://github.com/argoproj/argocd-example-apps.git"
-              , path = "guestbook"
-              }
-        , destination =
-            argocd.DestinationSpec::{
-            , server = "https://kubernetes.default.svc"
-            , namespace = "default"
+    , spec = argocd.ApplicationSpec::{
+      , project = "default"
+      , source =
+          argocd.SourceSpec.TypesUnion.Directory
+            argocd.DirectorySourceSpec::{
+            , repoURL = "https://github.com/argoproj/argocd-example-apps.git"
+            , path = "guestbook"
             }
+      , destination = argocd.DestinationSpec::{
+        , server = "https://kubernetes.default.svc"
+        , namespace = "default"
         }
+      }
     }
 
 ```
