@@ -1,5 +1,5 @@
 { kubernetes =
-      ./kubernetes/package.dhall sha256:a07ab9811e85803cf38d22bc7cb5b5bbbae61968b7ff1e41c67b23d763d75f99
+      ./kubernetes/package.dhall sha256:23cd92299d0540a9e6537d133452f891b03fd7faab38d11ba551c35e58a4ec22
     ? ./kubernetes/package.dhall
 , Prelude =
       https://prelude.dhall-lang.org/v12.0.0/package.dhall sha256:aea6817682359ae1939f3a15926b84ad5763c24a3740103202d2eaaea4d01f4c

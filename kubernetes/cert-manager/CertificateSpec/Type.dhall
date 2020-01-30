@@ -1,5 +1,5 @@
 { secretName : Text
 , issuerRef : { name : Text, kind : Text }
-, commonName : Text
+, commonName : Optional Text
 , dnsNames : Optional (List Text)
 }

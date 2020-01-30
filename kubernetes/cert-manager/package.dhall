@@ -2,7 +2,7 @@
       ./Certificate/package.dhall sha256:38c9e8ab8a0e5706725ffe9a8b300dfb0f6d5598d5429637ba0ca2b1c652be21
     ? ./Certificate/package.dhall
 , CertificateSpec =
-      ./CertificateSpec/package.dhall sha256:f0334b6587cb797a53b8a7b32344c5667803b924157857c59cc90e51ccb833c6
+      ./CertificateSpec/package.dhall sha256:c01223f2c58aae8b548261c464001cf1506eb8101405b7aa801980a3d0690bfe
     ? ./CertificateSpec/package.dhall
 , ClusterIssuer =
       ./ClusterIssuer/package.dhall sha256:df733476fa5544e10a4daaa49248ba73a62ff89ae701bb2da40e33ccd91b19c3
