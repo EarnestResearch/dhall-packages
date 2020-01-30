@@ -1,5 +1,5 @@
 { cert-manager =
-      ./cert-manager/package.dhall sha256:9e5325a301a99b3163797d3f583f9854a21e516f0578a59e0cc1fca8a3ce9538
+      ./cert-manager/package.dhall sha256:84d8acf2650094d5129e8c75b8f6d6c94e5878767949354e4ff6d7eeae5cfe39
     ? ./cert-manager/package.dhall
 , kubernetes-external-secrets =
       ./kubernetes-external-secrets/package.dhall sha256:4b52e6019a04f34da8819d85e6f43d5387040fbab102ba88399584fd0b845ee6
