@@ -1,1 +1,1 @@
-{ apiVersion = "certmanager.k8s.io/v1alpha1", kind = "Issuer" }
+{ apiVersion = "certmanager.k8s.io/v1alpha2", kind = "Issuer" }
