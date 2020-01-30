@@ -1,6 +1,6 @@
 { apiVersion = "cert-manager.io/v1alpha2"
 , kind = "Certificate"
 , spec =
-      ../CertificateSpec/default.dhall sha256:0859dea415bdfe96abcb09eb297511992e6fc57895f49bab82892d8e45e4e545
+      ../CertificateSpec/default.dhall sha256:71fc27c2437895f4d85904a5b7d5fab1134e00aab184bf937b3a8967d446513d
     ? ../CertificateSpec/default.dhall
 }
