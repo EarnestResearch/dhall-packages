@@ -12,7 +12,7 @@ let k8s = ../k8s/1.14.dhall
 
 let exampleWebhook =
       Webhook::{
-      , imageName = "docker/whalesay:latest"
+      , imageName = "docker/whalesay:latest" -- replace with webhook image
       , name = "whalesay"
       , namespace = "default"
       , path = "/mutate"
@@ -29,3 +29,5 @@ let exampleWebhook =
 
 in  Webhook.renderMutatingWebhook exampleWebhook
 ```
+
+To implement a webhook in Haskell, you can use https://github.com/EarnestResearch/kubernetes-webhook-haskell/
