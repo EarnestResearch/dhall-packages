@@ -18,6 +18,7 @@ This repository maps to version [12.0.0](https://github.com/dhall-lang/dhall-lan
     - [argo](kubernetes/argo). Automatically generated bindings for [Argo Workflows](https://argoproj.github.io/argo/).
     - [argo-events](kubernetes/argo-events). Automatically generated bindings for [Argo Events](https://argoproj.github.io/argo-events/).
     - [ambassador](kubernetes/ambassador). Manually curated bindings for Ambassador.
+    - [webhook](kubernetes/webhook). Opinionated template to create admission webhooks on Kubernetes
 - [util](util/CronTab) Various utilities and types that can be shared
     - [CronTab](util/CronTab) CronTab type, default and "show" function.
 
