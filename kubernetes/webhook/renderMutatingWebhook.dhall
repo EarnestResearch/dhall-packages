@@ -1,12 +1,20 @@
-let k8s = ../k8s/1.14.dhall
+let k8s =
+        ../k8s/1.14.dhall sha256:7839bf40f940757e4d71d3c1b84d878f6a4873c3b2706ae4be307b5991acdcac
+      ? ../k8s/1.14.dhall
 
-let cert-manager = ../cert-manager/package.dhall
+let cert-manager =
+        ../cert-manager/package.dhall sha256:84d8acf2650094d5129e8c75b8f6d6c94e5878767949354e4ff6d7eeae5cfe39
+      ? ../cert-manager/package.dhall
 
 let certsPath = "/certs"
 
-let Webhook = ./Type.dhall
+let Webhook =
+        ./Type.dhall sha256:c833a7c500b51ebe0c1879967d11b476428a885b276d70e5f8cc3b4da09890ad
+      ? ./Type.dhall
 
-let labels = ./labels.dhall
+let labels =
+        ./labels.dhall sha256:05c731fe37f21baf0f03bdbe393472a33ba7dd791b924c5ecc2696042f27d6fc
+      ? ./labels.dhall
 
 let deployment =
           \(webhook : Webhook)

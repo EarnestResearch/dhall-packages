@@ -19,4 +19,7 @@
 , ambassador =
       ./ambassador/package.dhall sha256:5aaed07cae5f55f7a989ec39240716e6f9656c47681c552aca8fd138aaf14bcf
     ? ./ambassador/package.dhall
+, webhook =
+      ./webhook/package.dhall sha256:a64f1ecb837e63b975ea0f0cb0304c926e3d4d3efab92bc6af163cdea6a24561
+    ? ./webhook/package.dhall
 }
