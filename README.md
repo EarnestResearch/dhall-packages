@@ -34,7 +34,7 @@ let packages = https://raw.githubusercontent.com/EarnestResearch/dhall-packages/
 
 let argocd = packages.kubernetes.argocd
 
-let k8s = packages.kubernetes.k8s.schemas
+let k8s = packages.kubernetes.k8s.`1-14`
 
 in  argocd.Application::{
     , metadata = k8s.ObjectMeta::{ name = "hello-app" }
@@ -62,7 +62,7 @@ If you don't want to download the entire packages collection, you can simply ref
 
 Note: if you use this repository for kubernetes and you are converting to YAML, you should run
 ```sh
-dhall-to-yaml --omitEmpty
+dhall-to-yaml --omit-empty
 ```
 
 ## Binary cache
