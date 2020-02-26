@@ -5,7 +5,7 @@
       ./kubernetes-external-secrets/package.dhall sha256:4b52e6019a04f34da8819d85e6f43d5387040fbab102ba88399584fd0b845ee6
     ? ./kubernetes-external-secrets/package.dhall
 , k8s =
-      ./k8s/package.dhall sha256:4b575d18387671adf3e3b1db4fe7fa6ff880c26c8c69082176b4ef84dee2e4d6
+      ./k8s/package.dhall sha256:d6d918b7558b4ae5c3774c9a2a460ade08008dd0f458770d8fd81efa0d588aff
     ? ./k8s/package.dhall
 , argocd =
       ./argocd/package.dhall sha256:37659a96e878f98fa6643ec2db53c17dfc9cc388c3a445a979e0310be12e6611
