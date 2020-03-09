@@ -46,6 +46,7 @@ in  { add_linkerd_headers = None Bool
     , host = None Text
     , host_regex = None Bool
     , host_rewrite = None Text
+    , idle_timeout_ms = None Natural
     , load_balancer =
         None
           (   ../Loadbalancer/Type.dhall sha256:49728b27fe193b251a030abf3324b36cdcbf898eaf82454078956f73474812e5
