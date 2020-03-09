@@ -37,6 +37,15 @@
 , MappingSpec =
       ./MappingSpec/package.dhall sha256:ac43b68bd088657681858fe761529135357019bfb55faa09cedf85a0df3780ae
     ? ./MappingSpec/package.dhall
+, MappingV2 =
+      ./MappingV2/package.dhall sha256:c6afdaf8644ce8b967cdca3ca820ab725515630d672c70c0af3944ea0f16f64c
+    ? ./MappingV2/package.dhall
+, MappingSpecV2 =
+      ./MappingSpecV2/package.dhall sha256:2929a52008283a5f28b92dcbcc78d0e1d79ce207a04eb792bca46ee24039a58a
+    ? ./MappingSpecV2/package.dhall
+, RateLimit =
+      ./RateLimit/Type.dhall sha256:ff00d495134b63b0cf9b13a8d5b8433ec09023e1be6b3ca214009ab501db2c02
+    ? ./RateLimit/Type.dhall
 , RetryOnValue =
       ./RetryOnValue/Type.dhall sha256:f4b75c7df63d13e9637cc950fc6109465f6cbaaffb767248e42f963ed36b28b0
     ? ./RetryOnValue/Type.dhall
