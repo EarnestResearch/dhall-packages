@@ -17,7 +17,7 @@
       ./argo-events/package.dhall sha256:06fdc660a4abfc141641cfc58855ad52192b9f93d4d8edbaae2f9aba77d1efc7
     ? ./argo-events/package.dhall
 , ambassador =
-      ./ambassador/package.dhall sha256:5aaed07cae5f55f7a989ec39240716e6f9656c47681c552aca8fd138aaf14bcf
+      ./ambassador/package.dhall sha256:cab330e175a5a53fa0ebeaf8087c351ed76e685627b7aade401efffe01c652ec
     ? ./ambassador/package.dhall
 , webhook =
       ./webhook/package.dhall sha256:a64f1ecb837e63b975ea0f0cb0304c926e3d4d3efab92bc6af163cdea6a24561
