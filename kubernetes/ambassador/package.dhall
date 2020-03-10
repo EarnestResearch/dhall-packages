@@ -38,7 +38,7 @@
       ./MappingSpec/package.dhall sha256:ac43b68bd088657681858fe761529135357019bfb55faa09cedf85a0df3780ae
     ? ./MappingSpec/package.dhall
 , MappingV2 =
-      ./MappingV2/package.dhall sha256:c6afdaf8644ce8b967cdca3ca820ab725515630d672c70c0af3944ea0f16f64c
+      ./MappingV2/package.dhall sha256:11efd70c6d3de56593ba26837b7927b09fd29b915330e2160daff8a05a2cfc4a
     ? ./MappingV2/package.dhall
 , MappingSpecV2 =
       ./MappingSpecV2/package.dhall sha256:fa039d5cf9e82d6b869f50b59db25ac319e4930b6ace9ad8160418de92639415
