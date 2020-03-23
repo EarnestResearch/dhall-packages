@@ -10,7 +10,7 @@ The idea is to facilitate package discovery and provide versions containing pack
 This repository maps to version [12.0.0](https://github.com/dhall-lang/dhall-lang/releases/tag/v12.0.0) of the dhall standard, and therefore requires dhall [1.28.0](https://github.com/dhall-lang/dhall-haskell/releases/tag/1.28.0) or later.
 
 ## What does this repository contain?
-- [kubernetes](kubernetes) Various bindings for Kubernetes, based on [dhall-kubernetes](https://github.com/dhall-lang/dhall-kubernetes)
+- [kubernetes](kubernetes) Various bindings for Kubernetes, based on [dhall-kubernetes](https://github.com/dhall-lang/dhall-kubernetes). The base kubernetes version this repository uses is `1.15`.
     - [argocd](kubernetes/argocd) Manually curated bindings for ArgoCD. Updated to version 1.2.1
     - [cert-manager](kubernetes/cert-manager) Some bindings for cert-manager. Contributions welcome!
     - [k8s](kubernetes/k8s) Re-export of [dhall-kubernetes](https://github.com/dhall-lang/dhall-kubernetes) for convenience
@@ -21,6 +21,7 @@ This repository maps to version [12.0.0](https://github.com/dhall-lang/dhall-lan
     - [webhook](kubernetes/webhook). Opinionated template to create admission webhooks on Kubernetes
 - [util](util/CronTab) Various utilities and types that can be shared
     - [CronTab](util/CronTab) CronTab type, default and "show" function.
+
 
 ## How to use this repository
 You can import all the packages by doing (it's better if you freeze the import and point it to a specific commit):
