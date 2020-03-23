@@ -1,10 +1,10 @@
 let argocd =
-        ../package.dhall sha256:37659a96e878f98fa6643ec2db53c17dfc9cc388c3a445a979e0310be12e6611
+        ../package.dhall sha256:c7a4e6926237d9e229244f201b330ac53a34c197456b75d3ec54a6f2e5aa384d
       ? ../package.dhall
 
 let k8s =
-        ../../k8s/1.14.dhall sha256:7839bf40f940757e4d71d3c1b84d878f6a4873c3b2706ae4be307b5991acdcac
-      ? ../../k8s/1.14.dhall
+        ../../k8s/1.15.dhall sha256:4bd5939adb0a5fc83d76e0d69aa3c5a30bc1a5af8f9df515f44b6fc59a0a4815
+      ? ../../k8s/1.15.dhall
 
 in  argocd.TypesUnion.Project
       argocd.Project::{

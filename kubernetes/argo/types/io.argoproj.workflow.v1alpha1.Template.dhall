@@ -3,7 +3,7 @@
     ? ./io.argoproj.workflow.v1alpha1.ArtifactLocation.dhall
 , initContainers :
     List
-      (   ./io.argoproj.workflow.v1alpha1.UserContainer.dhall sha256:20dee8c8a03b7be85600bf83fa468410ae643f7c48d84d08c7b562ced7630e3a
+      (   ./io.argoproj.workflow.v1alpha1.UserContainer.dhall sha256:da7065231aecb9e3f7a4975ac9d02c33f63f6cae708999f55b195532f90c3a9d
         ? ./io.argoproj.workflow.v1alpha1.UserContainer.dhall
       )
 , metadata :
@@ -16,7 +16,7 @@
     ? ./io.argoproj.workflow.v1alpha1.RetryStrategy.dhall
 , sidecars :
     List
-      (   ./io.argoproj.workflow.v1alpha1.UserContainer.dhall sha256:20dee8c8a03b7be85600bf83fa468410ae643f7c48d84d08c7b562ced7630e3a
+      (   ./io.argoproj.workflow.v1alpha1.UserContainer.dhall sha256:da7065231aecb9e3f7a4975ac9d02c33f63f6cae708999f55b195532f90c3a9d
         ? ./io.argoproj.workflow.v1alpha1.UserContainer.dhall
       )
 , steps :
@@ -47,7 +47,7 @@
       )
 , container :
     Optional
-      (   ./io.k8s.api.core.v1.Container.dhall sha256:db5f4f75cf6cf3888c0f7a70deef4493921255eb21bb02098660383d4927051d
+      (   ./io.k8s.api.core.v1.Container.dhall sha256:ad60df4905ca468fd5134fe0267bf255facc227bc5e8a505257f2d57567a13f2
         ? ./io.k8s.api.core.v1.Container.dhall
       )
 , daemon : Optional Bool
@@ -77,7 +77,7 @@
 , schedulerName : Optional Text
 , script :
     Optional
-      (   ./io.argoproj.workflow.v1alpha1.ScriptTemplate.dhall sha256:9d26b255c7ef88260efc2415cddde8c69dbefe05c7d59793ec8c82cd6441d551
+      (   ./io.argoproj.workflow.v1alpha1.ScriptTemplate.dhall sha256:a15f3aba6b20bf67bdf62c06c420bd04fca0acbd75a20afce4ac59a0cbc70638
         ? ./io.argoproj.workflow.v1alpha1.ScriptTemplate.dhall
       )
 }

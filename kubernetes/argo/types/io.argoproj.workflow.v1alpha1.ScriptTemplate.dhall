@@ -51,7 +51,7 @@
       )
 , securityContext :
     Optional
-      (   ./io.k8s.api.core.v1.SecurityContext.dhall sha256:2af8194b7c332726b1a90fc36a47aa20f507fedf14e2e238e72153c0e0979798
+      (   ./io.k8s.api.core.v1.SecurityContext.dhall sha256:ae334ad99dfb4d0d69fd0826eab7af27147f0713a7eecccf4b99f697488704c8
         ? ./io.k8s.api.core.v1.SecurityContext.dhall
       )
 , stdin : Optional Bool

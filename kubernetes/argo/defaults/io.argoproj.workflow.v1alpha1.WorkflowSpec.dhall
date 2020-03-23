@@ -6,7 +6,7 @@
 , nodeSelector = [] : List { mapKey : Text, mapValue : Text }
 , templates =
     [] : List
-           (   ./../types/io.argoproj.workflow.v1alpha1.Template.dhall sha256:331df1402df98f077c72cd7a40580f5369ca3617d9a499ea92c1d1fe99ed5092
+           (   ./../types/io.argoproj.workflow.v1alpha1.Template.dhall sha256:2119e0d70f4120a310eeef38294b05fd507db6961e357c805752c2214942b48c
              ? ./../types/io.argoproj.workflow.v1alpha1.Template.dhall
            )
 , tolerations =
@@ -16,7 +16,7 @@
            )
 , volumeClaimTemplates =
     [] : List
-           (   ./../types/io.k8s.api.core.v1.PersistentVolumeClaim.dhall sha256:bb3a244115c928544d8287f9fbce5080ac837832b6f08dccebbda7eb5d29e843
+           (   ./../types/io.k8s.api.core.v1.PersistentVolumeClaim.dhall sha256:e26ba9b031f0ec56b4bf4f3b307157797845837ce920bd901fb9c3980a747f39
              ? ./../types/io.k8s.api.core.v1.PersistentVolumeClaim.dhall
            )
 , volumes =
