@@ -1,9 +1,9 @@
 let k8s =
-        ../k8s/1.14.dhall sha256:7839bf40f940757e4d71d3c1b84d878f6a4873c3b2706ae4be307b5991acdcac
-      ? ../k8s/1.14.dhall
+        ../k8s/1.15.dhall sha256:4bd5939adb0a5fc83d76e0d69aa3c5a30bc1a5af8f9df515f44b6fc59a0a4815
+      ? ../k8s/1.15.dhall
 
 let cert-manager =
-        ../cert-manager/package.dhall sha256:84d8acf2650094d5129e8c75b8f6d6c94e5878767949354e4ff6d7eeae5cfe39
+        ../cert-manager/package.dhall sha256:39ea0b4899259b1f92859f2e6b9ccdf151b5623ba9ed01b5f2a0afd8c81b5332
       ? ../cert-manager/package.dhall
 
 let certsPath = "/certs"
@@ -131,13 +131,14 @@ let mutatingWebhookConfiguration =
                   }
             }
           , webhooks =
-            [ k8s.Webhook::{
+            [ k8s.MutatingWebhook::{
               , name = "${webhook.name}.${webhook.namespace}.svc"
               , clientConfig = k8s.WebhookClientConfig::{
                 , service = Some
                     { name = webhook.name
                     , namespace = webhook.namespace
                     , path = Some webhook.path
+                    , port = Some 443
                     }
                 }
               , failurePolicy = webhook.failurePolicy

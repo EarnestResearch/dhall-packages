@@ -71,7 +71,7 @@
       ./defaults/io.argoproj.workflow.v1alpha1.S3Bucket.dhall sha256:b2386ff0eb06a6a3b37e4b3337f238d7593232137697f4057784d04203088ff5
     ? ./defaults/io.argoproj.workflow.v1alpha1.S3Bucket.dhall
 , ScriptTemplate =
-      ./defaults/io.argoproj.workflow.v1alpha1.ScriptTemplate.dhall sha256:6a83d6c43bfc0f8a75a44dc3df8147e8bd0550141a4b7dd0ddd98c6692615fb9
+      ./defaults/io.argoproj.workflow.v1alpha1.ScriptTemplate.dhall sha256:2915a675aa3c6294f5788827a54046076756a34f9fc31e9527c9c89ea18cf7cf
     ? ./defaults/io.argoproj.workflow.v1alpha1.ScriptTemplate.dhall
 , Sequence =
       ./defaults/io.argoproj.workflow.v1alpha1.Sequence.dhall sha256:e89c73327f41a482a14b764fd3cb1b922f3c28d48967c6f146126b27660b371a
@@ -83,22 +83,22 @@
       ./defaults/io.argoproj.workflow.v1alpha1.TarStrategy.dhall sha256:9bb9dcb5bf6f795291686f59383bcd01c8e79b87fc3fb63351d46dea100ac51b
     ? ./defaults/io.argoproj.workflow.v1alpha1.TarStrategy.dhall
 , Template =
-      ./defaults/io.argoproj.workflow.v1alpha1.Template.dhall sha256:435f01c8749d90c90c6ebe7ea26272d79c10aef5a03659d5062646bcdc307c44
+      ./defaults/io.argoproj.workflow.v1alpha1.Template.dhall sha256:73aaaec5b0806d5548f46bdc0cbca39e5db5adc664f47a05dda512790c64d478
     ? ./defaults/io.argoproj.workflow.v1alpha1.Template.dhall
 , UserContainer =
-      ./defaults/io.argoproj.workflow.v1alpha1.UserContainer.dhall sha256:15e48cd5c79040fe0e2ee0b5314f2eb4edad9b228d3dfdb44cf71fb9a0ba888d
+      ./defaults/io.argoproj.workflow.v1alpha1.UserContainer.dhall sha256:78f1b767410ba41e0e2c5bab41d12b4ca6141566aa2c3dd8b2e3209279490b38
     ? ./defaults/io.argoproj.workflow.v1alpha1.UserContainer.dhall
 , ValueFrom =
       ./defaults/io.argoproj.workflow.v1alpha1.ValueFrom.dhall sha256:555180487c64ec519a9edfab1ecbf4a9ace197e6b781029b2fad639658ec0bd6
     ? ./defaults/io.argoproj.workflow.v1alpha1.ValueFrom.dhall
 , Workflow =
-      ./defaults/io.argoproj.workflow.v1alpha1.Workflow.dhall sha256:f4b4f3353829b867084128b99c102bbeb5a2b621fd9a106ba84b2b3f0c2505ea
+      ./defaults/io.argoproj.workflow.v1alpha1.Workflow.dhall sha256:9ade383df4196cbc43f433c3388042614188017b75dbbbccb405aa0f5fa156e5
     ? ./defaults/io.argoproj.workflow.v1alpha1.Workflow.dhall
 , WorkflowList =
-      ./defaults/io.argoproj.workflow.v1alpha1.WorkflowList.dhall sha256:22da1e7f5446e52ce5812d311ee47c0aa9580834353eb88342c3577e7fce0609
+      ./defaults/io.argoproj.workflow.v1alpha1.WorkflowList.dhall sha256:af32d1ed1d44b3e9809532b05952fa1003699b90d1fbe790d4c3c010f627926b
     ? ./defaults/io.argoproj.workflow.v1alpha1.WorkflowList.dhall
 , WorkflowSpec =
-      ./defaults/io.argoproj.workflow.v1alpha1.WorkflowSpec.dhall sha256:23fed14b3cc7b68662d60c24fae28a2d60b5333a25eb66bb3d62d56090ffccfd
+      ./defaults/io.argoproj.workflow.v1alpha1.WorkflowSpec.dhall sha256:73e721a84f0a1be7f8adee32e02becdde3f64162051ba0fa059f2a364743c2dd
     ? ./defaults/io.argoproj.workflow.v1alpha1.WorkflowSpec.dhall
 , WorkflowStep =
       ./defaults/io.argoproj.workflow.v1alpha1.WorkflowStep.dhall sha256:90232b03be7ef9b230b94a5310d514a48c33397668e8a9a963a75270b4342f78

@@ -1,9 +1,9 @@
 let TypesUnion =
-        ../../TypesUnion.dhall sha256:e1ec4a7e47e1182ee7f7308ddd397bfec0ebe4da9188f1a85ff7f062a68b9b71
+        ../../TypesUnion.dhall sha256:c1f91d90d8220d11f9ff8d745878da05ca9dc0af20a0792fe70c60c876308fc9
       ? ../../TypesUnion.dhall
 
 let Application =
-        ../../Application/package.dhall sha256:36ddc602d37556fed812b098dbd6efc22062e68418d6b6d2ce8a1f3ff9118067
+        ../../Application/package.dhall sha256:a6a0db9570250e7d94e9fcf7e79613fd9e12a5211c70030d58ff24fde2a4f765
       ? ../../Application/package.dhall
 
 let ApplicationSpec =
@@ -23,8 +23,8 @@ let KustomizeSpec =
       ? ../../KustomizeSpec/package.dhall
 
 let k8s =
-        ../../../k8s/1.14.dhall sha256:7839bf40f940757e4d71d3c1b84d878f6a4873c3b2706ae4be307b5991acdcac
-      ? ../../../k8s/1.14.dhall
+        ../../../k8s/1.15.dhall sha256:4bd5939adb0a5fc83d76e0d69aa3c5a30bc1a5af8f9df515f44b6fc59a0a4815
+      ? ../../../k8s/1.15.dhall
 
 in      \ ( appConfig
           :   ../KustomizeAppConfig/Type.dhall sha256:4a3f8913366c0ac644abbb39626a3b2df997d07fc23a1754d262998c44d89908

@@ -10,7 +10,7 @@ let argocd =
       https://raw.githubusercontent.com/EarnestResearch/dhall-packages/master/kubernetes/argocd/package.dhall
 
 let k8s =
-      https://raw.githubusercontent.com/EarnestResearch/dhall-packages/master/kubernetes/k8s/1.14.dhall
+      https://raw.githubusercontent.com/EarnestResearch/dhall-packages/master/kubernetes/k8s/1.15.dhall
 
 in  argocd.Application::{
     , metadata = k8s.ObjectMeta::{ name = "guestbook" }

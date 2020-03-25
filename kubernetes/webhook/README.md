@@ -8,7 +8,7 @@ Example:
 -- change the imports to be http imports from this repository
 let Webhook = ./package.dhall
 
-let k8s = ../k8s/1.14.dhall
+let k8s = ../k8s/1.15.dhall
 
 let exampleWebhook =
       Webhook::{

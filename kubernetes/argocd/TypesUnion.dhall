@@ -1,7 +1,7 @@
 < Application :
-      ./Application/Type.dhall sha256:47644abfd824f7f4601c5d43f30c5e047e1c5e8c074b5c778b2a9d0e0e97b692
+      ./Application/Type.dhall sha256:9daa73e9ee313a2a02e9ba492c082e431b02e34fef44349c1719b29531f23bda
     ? ./Application/Type.dhall
 | Project :
-      ./Project/Type.dhall sha256:41537b604e7562bc574a20bee1aa5b4237cce409f295741e2c041bb6c01cad94
+      ./Project/Type.dhall sha256:0afaf220f3beed191477e08c4d31f776fb9eff68be5465da0b867ba85a59ba7b
     ? ./Project/Type.dhall
 >

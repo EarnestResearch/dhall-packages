@@ -1,10 +1,10 @@
 let Webhook =
-        ./package.dhall sha256:a64f1ecb837e63b975ea0f0cb0304c926e3d4d3efab92bc6af163cdea6a24561
+        ./package.dhall sha256:432fbca750183c894f3f094f5ae718d55d5f8769b8621974d4292b4ecb368d01
       ? ./package.dhall
 
 let k8s =
-        ../k8s/1.14.dhall sha256:7839bf40f940757e4d71d3c1b84d878f6a4873c3b2706ae4be307b5991acdcac
-      ? ../k8s/1.14.dhall
+        ../k8s/1.15.dhall sha256:4bd5939adb0a5fc83d76e0d69aa3c5a30bc1a5af8f9df515f44b6fc59a0a4815
+      ? ../k8s/1.15.dhall
 
 let exampleWebhook =
       Webhook::{

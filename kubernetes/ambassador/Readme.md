@@ -10,7 +10,7 @@ let ambassador =
       https://raw.githubusercontent.com/EarnestResearch/dhall-packages/kubernetes/ambassador/package.dhall
 
 let k8s =
-      https://raw.githubusercontent.com/EarnestResearch/dhall-packages/master/kubernetes/k8s/1.14.dhall
+      https://raw.githubusercontent.com/EarnestResearch/dhall-packages/master/kubernetes/k8s/1.15.dhall
 
 in  ambassador.Mapping::{
     , metadata = k8s.ObjectMeta::{ name = "guestbook" }
@@ -26,7 +26,7 @@ You can leverage dhall's capabilities and tie the mapping to the service definit
 
 ```dhall
 let k8s =
-      https://raw.githubusercontent.com/EarnestResearch/dhall-packages/master/kubernetes/k8s/1.14.dhall
+      https://raw.githubusercontent.com/EarnestResearch/dhall-packages/master/kubernetes/k8s/1.15.dhall
 
 let ambassador =
       https://raw.githubusercontent.com/EarnestResearch/dhall-packages/master/kubernetes/ambassador/package.dhall
