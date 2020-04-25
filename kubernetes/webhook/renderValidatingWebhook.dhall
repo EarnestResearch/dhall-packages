@@ -103,16 +103,16 @@ let certificate =
             , issuerRef = { name = webhook.name, kind = (issuer webhook).kind }
             , commonName = Some "${webhook.name}.${webhook.namespace}.svc"
             , dnsNames = Some
-                [ webhook.name
-                , "${webhook.name}.${webhook.namespace}"
-                , "${webhook.name}.${webhook.namespace}.svc"
-                , "${webhook.name}.${webhook.namespace}.svc.cluster.local"
-                , "${webhook.name}:443"
-                , "${webhook.name}.${webhook.namespace}:443"
-                , "${webhook.name}.${webhook.namespace}.svc:443"
-                , "${webhook.name}.${webhook.namespace}.svc.cluster.local:443"
-                , "localhost:8080"
-                ]
+              [ webhook.name
+              , "${webhook.name}.${webhook.namespace}"
+              , "${webhook.name}.${webhook.namespace}.svc"
+              , "${webhook.name}.${webhook.namespace}.svc.cluster.local"
+              , "${webhook.name}:443"
+              , "${webhook.name}.${webhook.namespace}:443"
+              , "${webhook.name}.${webhook.namespace}.svc:443"
+              , "${webhook.name}.${webhook.namespace}.svc.cluster.local:443"
+              , "localhost:8080"
+              ]
             , usages = Some [ "any" ]
             , isCA = Some False
             }
@@ -124,22 +124,21 @@ let mutatingWebhookConfiguration =
           , metadata = k8s.ObjectMeta::{
             , name = webhook.name
             , labels = labels webhook
-            , annotations =
-                toMap
-                  { `cert-manager.io/inject-ca-from` =
-                      "${webhook.namespace}/${webhook.name}"
-                  }
+            , annotations = toMap
+                { `cert-manager.io/inject-ca-from` =
+                    "${webhook.namespace}/${webhook.name}"
+                }
             }
           , webhooks =
             [ k8s.ValidatingWebhook::{
               , name = "${webhook.name}.${webhook.namespace}.svc"
               , clientConfig = k8s.WebhookClientConfig::{
                 , service = Some
-                    { name = webhook.name
-                    , namespace = webhook.namespace
-                    , path = Some webhook.path
-                    , port = Some 443
-                    }
+                  { name = webhook.name
+                  , namespace = webhook.namespace
+                  , path = Some webhook.path
+                  , port = Some 443
+                  }
                 }
               , failurePolicy = webhook.failurePolicy
               , admissionReviewVersions = [ "v1beta1" ]

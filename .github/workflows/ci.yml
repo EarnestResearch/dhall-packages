@@ -10,10 +10,9 @@ jobs:
     
     steps:
     - uses: actions/checkout@v1
-    - name: Download dhall
-      run: |
-        curl -sSL https://github.com/dhall-lang/dhall-haskell/releases/download/1.29.0/dhall-1.29.0-x86_64-linux.tar.bz2 | tar -xj  -C .
-        sudo mv bin/dhall /usr/local/bin/dhall
+    - uses: dhall-lang/setup-dhall@v4
+      with:
+        version: '1.31.1'
     - name: check code
       run: dhall <<< ./package.dhall
     - name: check formatting
