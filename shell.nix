@@ -1,10 +1,10 @@
-with (import ./nixpkgs {});
-let dhall = (import ./nix/dhall.nix) { inherit (pkgs) runCommand; };
+let 
+  sources = import ./nix/sources.nix {};
+  pkgs = import sources.nixpkgs {};
 
-in
-mkShell {
+in with pkgs; mkShell {
   buildInputs = [
-    dhall
+    haskellPackages.dhall_1_31_1
     git
   ];
 }
