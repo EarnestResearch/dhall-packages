@@ -16,6 +16,6 @@ jobs:
     - name: check code
       run: dhall <<< ./package.dhall
     - name: check formatting
-      run: find . -name '*.dhall' | xargs -n 1 dhall --ascii format --check --inplace'
+      run: find . -name '*.dhall' | xargs -n 1 dhall --ascii format --check --inplace
     - name: compute diff
       run: make diff || true
