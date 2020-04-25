@@ -16,12 +16,6 @@ jobs:
     - name: check code
       run: dhall <<< ./package.dhall
     - name: check formatting
-      uses: dhall-lang/setup-dhall@v4
-      run: find . -name '*.dhall' | xargs -n 1 dhall --ascii format --check --inplace
-      with:
-        version: '1.31.1'
+      run: find . -name '*.dhall' | xargs -n 1 dhall --ascii format --check --inplace'
     - name: compute diff
-      uses: dhall-lang/setup-dhall@v4
       run: make diff || true
-      with:
-        version: '1.31.1'
