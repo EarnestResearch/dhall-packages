@@ -9,7 +9,7 @@
         ? ./io.argoproj.sensor.v1alpha1.TriggerParameter.dhall
       )
 , template :
-      ./io.argoproj.sensor.v1alpha1.TriggerTemplate.dhall sha256:27a761b639686171d9f629b914e22ea0cd34e59e5022f1d5c26a9b3a334a3e24
+      ./io.argoproj.sensor.v1alpha1.TriggerTemplate.dhall sha256:05c939bd7766d566288b665e3bf52a80dd88ef3bb8d31b6f2f7eb00a468123da
     ? ./io.argoproj.sensor.v1alpha1.TriggerTemplate.dhall
 , templateParameters :
     List

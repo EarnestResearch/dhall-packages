@@ -16,7 +16,7 @@
     ? https://raw.githubusercontent.com/dhall-lang/dhall-kubernetes/fee24c0993ba0b20190e2fdb94e386b7fb67252d/types/io.k8s.api.core.v1.PodTemplateSpec.dhall
 , triggers :
     List
-      (   ./io.argoproj.sensor.v1alpha1.Trigger.dhall sha256:b299619204344298bf28313fd49730e1fe2ed4bcff2e969d44ca70e5a03f950d
+      (   ./io.argoproj.sensor.v1alpha1.Trigger.dhall sha256:585821a3cee06a33a3c00171355657ea50a7d27897e08159db4f96fc67294305
         ? ./io.argoproj.sensor.v1alpha1.Trigger.dhall
       )
 , circuit : Optional Text

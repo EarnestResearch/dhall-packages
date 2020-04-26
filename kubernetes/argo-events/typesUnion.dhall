@@ -50,7 +50,7 @@
       ./types/io.argoproj.gateway.v1alpha1.SensorNotificationWatcher.dhall sha256:4efff53aa4ed0ecafcc425dbe6e832e9bbc9019d7b15723688796831d2fe0da4
     ? ./types/io.argoproj.gateway.v1alpha1.SensorNotificationWatcher.dhall
 | ArtifactLocation :
-      ./types/io.argoproj.sensor.v1alpha1.ArtifactLocation.dhall sha256:8a4c2d6efbc7024e887299f8c566edb3c0a3b7d458a14f9a3b94eb36739416ed
+      ./types/io.argoproj.sensor.v1alpha1.ArtifactLocation.dhall sha256:4bcca005c30e32540574e239fd62e8e7f3f3ca16127dbfc8fb3dc18a57aa050a
     ? ./types/io.argoproj.sensor.v1alpha1.ArtifactLocation.dhall
 | Backoff :
       ./types/io.argoproj.sensor.v1alpha1.Backoff.dhall sha256:54bb11f8265b9861714e50cfccdd5ce1a175e6af4d8b37c9c7e666fdb62396cd
@@ -83,13 +83,13 @@
       ./types/io.argoproj.sensor.v1alpha1.GitRemoteConfig.dhall sha256:e1639cc8552108b90d660a4d917083b2c296cff3e61d805f885784b3a00299cc
     ? ./types/io.argoproj.sensor.v1alpha1.GitRemoteConfig.dhall
 | Sensor :
-      ./types/io.argoproj.sensor.v1alpha1.Sensor.dhall sha256:f661ba5469b568558a8666d06891732a7cae9c155c1dc31d5fca54fe5595120b
+      ./types/io.argoproj.sensor.v1alpha1.Sensor.dhall sha256:c3df1c92866f8a75258dfd65e583204ef00c4e44b8a5a91ffcbf70551ad4b56f
     ? ./types/io.argoproj.sensor.v1alpha1.Sensor.dhall
 | SensorList :
       ./types/io.argoproj.sensor.v1alpha1.SensorList.dhall sha256:070ff1e1657420921f3edd20d5a17ded65f580ad2b4e520c722b6152b830a03d
     ? ./types/io.argoproj.sensor.v1alpha1.SensorList.dhall
 | SensorSpec :
-      ./types/io.argoproj.sensor.v1alpha1.SensorSpec.dhall sha256:8b756e4e5c7acc74e859e4a560b88bdb462ecfbf2dc70da687747c00ec466200
+      ./types/io.argoproj.sensor.v1alpha1.SensorSpec.dhall sha256:3f2ecd04ec5615df6fb32b466696bcb1ea1e92ace91437cdf329fd2b8339d01c
     ? ./types/io.argoproj.sensor.v1alpha1.SensorSpec.dhall
 | SensorStatus :
       ./types/io.argoproj.sensor.v1alpha1.SensorStatus.dhall sha256:a7a5b93d43239663c5da523754c1a34d8e58172a934370427253c2a96dfc0acc
@@ -98,7 +98,7 @@
       ./types/io.argoproj.sensor.v1alpha1.TimeFilter.dhall sha256:08b2e66593f50b2f8d059b80a2fe8b010c866918df8e8f61f5c65eb42061459b
     ? ./types/io.argoproj.sensor.v1alpha1.TimeFilter.dhall
 | Trigger :
-      ./types/io.argoproj.sensor.v1alpha1.Trigger.dhall sha256:b299619204344298bf28313fd49730e1fe2ed4bcff2e969d44ca70e5a03f950d
+      ./types/io.argoproj.sensor.v1alpha1.Trigger.dhall sha256:585821a3cee06a33a3c00171355657ea50a7d27897e08159db4f96fc67294305
     ? ./types/io.argoproj.sensor.v1alpha1.Trigger.dhall
 | TriggerCondition :
       ./types/io.argoproj.sensor.v1alpha1.TriggerCondition.dhall sha256:4e394f7cb18c49fb976986624236a3134cbb5c073cf57c880f85b30f41339ee2
@@ -116,7 +116,7 @@
       ./types/io.argoproj.sensor.v1alpha1.TriggerStateLabels.dhall sha256:44636ce138963163856f624867e85656559eee3ef8a194e6c6fbf4386022c56f
     ? ./types/io.argoproj.sensor.v1alpha1.TriggerStateLabels.dhall
 | TriggerTemplate :
-      ./types/io.argoproj.sensor.v1alpha1.TriggerTemplate.dhall sha256:27a761b639686171d9f629b914e22ea0cd34e59e5022f1d5c26a9b3a334a3e24
+      ./types/io.argoproj.sensor.v1alpha1.TriggerTemplate.dhall sha256:05c939bd7766d566288b665e3bf52a80dd88ef3bb8d31b6f2f7eb00a468123da
     ? ./types/io.argoproj.sensor.v1alpha1.TriggerTemplate.dhall
 | URLArtifact :
       ./types/io.argoproj.sensor.v1alpha1.URLArtifact.dhall sha256:26efbbfd783deadaf56afff4a372a81588dda6d82aa9d0b88f23224853a72f42

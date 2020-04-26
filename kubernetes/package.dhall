@@ -1,5 +1,5 @@
 { cert-manager =
-      ./cert-manager/package.dhall sha256:39ea0b4899259b1f92859f2e6b9ccdf151b5623ba9ed01b5f2a0afd8c81b5332
+      ./cert-manager/package.dhall sha256:8d1dac3edbe258773c2fcb5a098aad47448d57988d4d9cb5fda1be2699a40178
     ? ./cert-manager/package.dhall
 , kubernetes-external-secrets =
       ./kubernetes-external-secrets/package.dhall sha256:7150f631a6ae9368732b0d6c0db279da1b4b84f3cdfb90270db7c785a4291c07
@@ -14,7 +14,7 @@
       ./argo/package.dhall sha256:d609a81190e145aa02bdd0e32aa8f018360946883f7a7706066a0fd4c6decc53
     ? ./argo/package.dhall
 , argo-events =
-      ./argo-events/package.dhall sha256:06fdc660a4abfc141641cfc58855ad52192b9f93d4d8edbaae2f9aba77d1efc7
+      ./argo-events/package.dhall sha256:c41b80de1b659b8510fbebf175c1112d2bd3170ed3f7b0d2d97c5eef6c028e7f
     ? ./argo-events/package.dhall
 , ambassador =
       ./ambassador/package.dhall sha256:24f35c2f19dace8e899148f03da017a086334583f7ab4b9a0d73afca9bd6a091

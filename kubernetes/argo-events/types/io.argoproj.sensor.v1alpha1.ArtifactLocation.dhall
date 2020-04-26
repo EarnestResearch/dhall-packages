@@ -14,8 +14,8 @@
 , inline : Optional Text
 , resource :
     Optional
-      (   https://prelude.dhall-lang.org/v12.0.0/JSON/Type sha256:5adb234f5868a5b0eddeb034d690aaba8cb94ea20d0d557003e90334fff6be3e
-        ? https://prelude.dhall-lang.org/v12.0.0/JSON/Type
+      (   https://prelude.dhall-lang.org/v15.0.0/JSON/Type sha256:40edbc9371979426df63e064333b02689b969c4cfbbccfa481216d2d1a6e9759
+        ? https://prelude.dhall-lang.org/v15.0.0/JSON/Type
       )
 , s3 :
     Optional

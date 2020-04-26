@@ -13,7 +13,7 @@
     ? ./io.argoproj.common.EventProtocol.dhall
 , triggers =
     [] : List
-           (   ./../types/io.argoproj.sensor.v1alpha1.Trigger.dhall sha256:b299619204344298bf28313fd49730e1fe2ed4bcff2e969d44ca70e5a03f950d
+           (   ./../types/io.argoproj.sensor.v1alpha1.Trigger.dhall sha256:585821a3cee06a33a3c00171355657ea50a7d27897e08159db4f96fc67294305
              ? ./../types/io.argoproj.sensor.v1alpha1.Trigger.dhall
            )
 , circuit = None Text
