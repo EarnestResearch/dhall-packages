@@ -1,5 +1,5 @@
 let Webhook =
-        ./package.dhall sha256:432fbca750183c894f3f094f5ae718d55d5f8769b8621974d4292b4ecb368d01
+        ./package.dhall sha256:ddb9f54f2f15cc2ec9e4106db0d98a68f28fbc2c58d92d36f1a5e2280aaa0bea
       ? ./package.dhall
 
 let k8s =

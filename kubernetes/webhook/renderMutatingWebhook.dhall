@@ -3,7 +3,7 @@ let k8s =
       ? ../k8s/1.15.dhall
 
 let cert-manager =
-        ../cert-manager/package.dhall sha256:39ea0b4899259b1f92859f2e6b9ccdf151b5623ba9ed01b5f2a0afd8c81b5332
+        ../cert-manager/package.dhall sha256:1249e3f2a27a1b46b5bd726c81f9424735a8e85344aba173705147b21560a384
       ? ../cert-manager/package.dhall
 
 let certsPath = "/certs"
