@@ -7,7 +7,7 @@ Dhall is a strongly-typed programmable configuration language that can be used e
 This repository contains useful generic dhall packages that can be reused.
 The idea is to facilitate package discovery and provide versions containing packages compatible to each other. 
 
-This repository maps to version [12.0.0](https://github.com/dhall-lang/dhall-lang/releases/tag/v12.0.0) of the dhall standard, and therefore requires dhall [1.28.0](https://github.com/dhall-lang/dhall-haskell/releases/tag/1.28.0) or later.
+This repository maps to version [15.0.0](https://github.com/dhall-lang/dhall-lang/releases/tag/v15.0.0) of the dhall standard, and therefore requires dhall [1.31.0](https://github.com/dhall-lang/dhall-haskell/releases/tag/1.31.0) or later.
 
 ## What does this repository contain?
 - [kubernetes](kubernetes) Various bindings for Kubernetes, based on [dhall-kubernetes](https://github.com/dhall-lang/dhall-kubernetes). The base kubernetes version this repository uses is `1.15`.

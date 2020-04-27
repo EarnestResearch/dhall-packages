@@ -1,7 +1,7 @@
 { Type =
-      ./../types/io.argoproj.sensor.v1alpha1.ArtifactLocation.dhall sha256:8a4c2d6efbc7024e887299f8c566edb3c0a3b7d458a14f9a3b94eb36739416ed
+      ./../types/io.argoproj.sensor.v1alpha1.ArtifactLocation.dhall sha256:4bcca005c30e32540574e239fd62e8e7f3f3ca16127dbfc8fb3dc18a57aa050a
     ? ./../types/io.argoproj.sensor.v1alpha1.ArtifactLocation.dhall
 , default =
-      ./../defaults/io.argoproj.sensor.v1alpha1.ArtifactLocation.dhall sha256:0978646dc7f74ee5ecd1cc18c89742d3fecf32297c72b5cc1f6af739204fbf95
+      ./../defaults/io.argoproj.sensor.v1alpha1.ArtifactLocation.dhall sha256:e5d6934549be1bef4b7ccca3580fae5e7f25ef2f9d3b80b2439114db35290fb1
     ? ./../defaults/io.argoproj.sensor.v1alpha1.ArtifactLocation.dhall
 }

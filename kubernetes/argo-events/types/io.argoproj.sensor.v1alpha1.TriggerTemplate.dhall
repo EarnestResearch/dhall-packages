@@ -1,6 +1,6 @@
 { name : Text
 , source :
-      ./io.argoproj.sensor.v1alpha1.ArtifactLocation.dhall sha256:8a4c2d6efbc7024e887299f8c566edb3c0a3b7d458a14f9a3b94eb36739416ed
+      ./io.argoproj.sensor.v1alpha1.ArtifactLocation.dhall sha256:4bcca005c30e32540574e239fd62e8e7f3f3ca16127dbfc8fb3dc18a57aa050a
     ? ./io.argoproj.sensor.v1alpha1.ArtifactLocation.dhall
 , when :
     Optional

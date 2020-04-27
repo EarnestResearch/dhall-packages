@@ -1,5 +1,5 @@
 { source =
-      ./io.argoproj.sensor.v1alpha1.ArtifactLocation.dhall sha256:0978646dc7f74ee5ecd1cc18c89742d3fecf32297c72b5cc1f6af739204fbf95
+      ./io.argoproj.sensor.v1alpha1.ArtifactLocation.dhall sha256:e5d6934549be1bef4b7ccca3580fae5e7f25ef2f9d3b80b2439114db35290fb1
     ? ./io.argoproj.sensor.v1alpha1.ArtifactLocation.dhall
 , when =
     None
