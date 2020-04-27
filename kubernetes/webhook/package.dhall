@@ -2,9 +2,9 @@
       ? ./schema.dhall
     )
 /\  { renderMutatingWebhook =
-          ./renderMutatingWebhook.dhall sha256:3a13bcf027103bb02716dee019d9a79293901c259540d086a89a7f03f64c8552
+          ./renderMutatingWebhook.dhall sha256:594c7722600cf2d5b82f786e972ada53dc233ef2e7be20492df35f858d46e858
         ? ./renderMutatingWebhook.dhall
     , renderValidatingWebhook =
-          ./renderValidatingWebhook.dhall sha256:2935ab3a2569b1a906d415c0db666d6d35e47f14ea30ed9f6fa75413cbef191a
+          ./renderValidatingWebhook.dhall sha256:5abd45ccbca34e7e2cb69826c5636c8cb9fb26baa31c12add82251651c133c5f
         ? ./renderValidatingWebhook.dhall
     }

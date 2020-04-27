@@ -86,7 +86,7 @@
       ./types/io.argoproj.sensor.v1alpha1.Sensor.dhall sha256:c3df1c92866f8a75258dfd65e583204ef00c4e44b8a5a91ffcbf70551ad4b56f
     ? ./types/io.argoproj.sensor.v1alpha1.Sensor.dhall
 , SensorList =
-      ./types/io.argoproj.sensor.v1alpha1.SensorList.dhall sha256:070ff1e1657420921f3edd20d5a17ded65f580ad2b4e520c722b6152b830a03d
+      ./types/io.argoproj.sensor.v1alpha1.SensorList.dhall sha256:31175182fbd654627860a583fe15f82ef9e6c9f079c7f78023f48af3d5bc62ff
     ? ./types/io.argoproj.sensor.v1alpha1.SensorList.dhall
 , SensorSpec =
       ./types/io.argoproj.sensor.v1alpha1.SensorSpec.dhall sha256:3f2ecd04ec5615df6fb32b466696bcb1ea1e92ace91437cdf329fd2b8339d01c
