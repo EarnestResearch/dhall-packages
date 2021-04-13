@@ -1,17 +1,18 @@
 let argocd =
-        ../package.dhall sha256:c7a4e6926237d9e229244f201b330ac53a34c197456b75d3ec54a6f2e5aa384d
+        ../package.dhall sha256:302884c4ef81b8d5791314819bb4a96a7db71f215fd727747f93443b52ae6ef3
       ? ../package.dhall
 
 let k8s =
-        ../../k8s/1.15.dhall sha256:4bd5939adb0a5fc83d76e0d69aa3c5a30bc1a5af8f9df515f44b6fc59a0a4815
+        ../../k8s/1.15.dhall sha256:9ed8981915875f3bbe08ad7047d92cd181b6ece140af876beecadb8ed079e10a
       ? ../../k8s/1.15.dhall
 
 in  argocd.TypesUnion.Project
       argocd.Project::{
       , metadata = k8s.ObjectMeta::{
-        , name =
-              ./projectName.dhall sha256:d7e4e24f5750f02229d03a034faabf0f3378960c20170d83e78ab83c1131aded
-            ? ./projectName.dhall
+        , name = Some
+            (   ./projectName.dhall sha256:d7e4e24f5750f02229d03a034faabf0f3378960c20170d83e78ab83c1131aded
+              ? ./projectName.dhall
+            )
         }
       , spec = argocd.ProjectSpec::{
         , description = "ArgoCD Example Project"

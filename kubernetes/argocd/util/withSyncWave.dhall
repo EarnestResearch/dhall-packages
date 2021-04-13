@@ -2,28 +2,37 @@
     Utility to add sync waves to argocd applications and projects.
 -}
 let k8s =
-        ../../k8s/1.15.dhall sha256:4bd5939adb0a5fc83d76e0d69aa3c5a30bc1a5af8f9df515f44b6fc59a0a4815
+        ../../k8s/1.15.dhall sha256:9ed8981915875f3bbe08ad7047d92cd181b6ece140af876beecadb8ed079e10a
       ? ../../k8s/1.15.dhall
 
 let Project =
-        ../Project/package.dhall sha256:94eb236942332300b6b8afcc4767272b156f440479d4bb1af5ac21a0b701f2d2
+        ../Project/package.dhall sha256:6a66066ed58b5e55c77ce9824e44dfe9dc26e2dfcfc217d4e80d3cf0afbd28cc
       ? ../Project/package.dhall
 
 let Application =
-        ../Application/package.dhall sha256:a6a0db9570250e7d94e9fcf7e79613fd9e12a5211c70030d58ff24fde2a4f765
+        ../Application/package.dhall sha256:c88bb716d8533593cda61e3ec65ce361a32bcd0f5d0849689ef1286cc43e1a51
       ? ../Application/package.dhall
 
 let TypesUnion =
-        ../TypesUnion.dhall sha256:c1f91d90d8220d11f9ff8d745878da05ca9dc0af20a0792fe70c60c876308fc9
+        ../TypesUnion.dhall sha256:d44accc04431078bc49cb9adf3a7144a4a2e961082e26073146ee9181bdbaca5
       ? ../TypesUnion.dhall
+
+let Optional/default =
+        https://prelude.dhall-lang.org/Optional/default sha256:5bd665b0d6605c374b3c4a7e2e2bd3b9c1e39323d41441149ed5e30d86e889ad
+      ? https://prelude.dhall-lang.org/Optional/default
 
 let withSyncWaveMetadata =
           \(wave : Integer)
       ->  \(metadata : k8s.ObjectMeta.Type)
       ->      metadata
-          //  { annotations =
-                    metadata.annotations
-                  # toMap { `argocd.argoproj.io/sync-wave` = Integer/show wave }
+          //  { annotations = Some
+                  (   Optional/default
+                        (List { mapKey : Text, mapValue : Text })
+                        ([] : List { mapKey : Text, mapValue : Text })
+                        metadata.annotations
+                    # toMap
+                        { `argocd.argoproj.io/sync-wave` = Integer/show wave }
+                  )
               }
 
 let withSyncWaveApplication =

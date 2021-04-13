@@ -1,40 +1,45 @@
 let k8s =
-        ../k8s/1.15.dhall sha256:4bd5939adb0a5fc83d76e0d69aa3c5a30bc1a5af8f9df515f44b6fc59a0a4815
+        ../k8s/1.15.dhall sha256:9ed8981915875f3bbe08ad7047d92cd181b6ece140af876beecadb8ed079e10a
       ? ../k8s/1.15.dhall
 
 let cert-manager =
-        ../cert-manager/package.dhall sha256:1249e3f2a27a1b46b5bd726c81f9424735a8e85344aba173705147b21560a384
+        ../cert-manager/package.dhall sha256:1640fd5080778e8e9f565cf5790efe18ba9aa57599248b3c75425825be4ef739
       ? ../cert-manager/package.dhall
 
 let certsPath = "/certs"
 
 let Webhook =
-        ./Type.dhall sha256:c833a7c500b51ebe0c1879967d11b476428a885b276d70e5f8cc3b4da09890ad
+        ./Type.dhall sha256:a71ac5b5469ecd2b6823ef59404fdf2878a24138028baa1697a3deadc8e9be73
       ? ./Type.dhall
 
 let labels =
-        ./labels.dhall sha256:05c731fe37f21baf0f03bdbe393472a33ba7dd791b924c5ecc2696042f27d6fc
+        ./labels.dhall sha256:1cf6971c63fef213125cc10c5ecf5c32df954da0e186943693994121485f67e1
       ? ./labels.dhall
 
 let deployment =
           \(webhook : Webhook)
       ->  k8s.Deployment::{
-          , metadata = k8s.ObjectMeta::{ name = webhook.name }
+          , metadata = k8s.ObjectMeta::{ name = Some webhook.name }
           , spec = Some k8s.DeploymentSpec::{
-            , selector = k8s.LabelSelector::{ matchLabels = labels webhook }
+            , selector = k8s.LabelSelector::{
+              , matchLabels = Some (labels webhook)
+              }
             , template = k8s.PodTemplateSpec::{
-              , metadata = k8s.ObjectMeta::{
-                , name = webhook.name
-                , labels = labels webhook
+              , metadata = Some k8s.ObjectMeta::{
+                , name = Some webhook.name
+                , labels = Some (labels webhook)
                 }
               , spec = Some k8s.PodSpec::{
                 , containers =
                   [ k8s.Container::{
                     , name = webhook.name
                     , image = Some webhook.imageName
-                    , ports =
-                      [ k8s.ContainerPort::{ containerPort = webhook.port } ]
-                    , env =
+                    , ports = Some
+                      [ k8s.ContainerPort::{
+                        , containerPort = Natural/toInteger webhook.port
+                        }
+                      ]
+                    , env = Some
                       [ k8s.EnvVar::{
                         , name = "CERTIFICATE_FILE"
                         , value = Some "${certsPath}/tls.crt"
@@ -48,7 +53,7 @@ let deployment =
                         , value = Some (Natural/show webhook.port)
                         }
                       ]
-                    , volumeMounts =
+                    , volumeMounts = Some
                       [ k8s.VolumeMount::{
                         , name = "certs"
                         , mountPath = certsPath
@@ -57,7 +62,7 @@ let deployment =
                       ]
                     }
                   ]
-                , volumes =
+                , volumes = Some
                   [ k8s.Volume::{
                     , name = "certs"
                     , secret = Some k8s.SecretVolumeSource::{
@@ -73,13 +78,14 @@ let deployment =
 let service =
           \(webhook : Webhook)
       ->  k8s.Service::{
-          , metadata = k8s.ObjectMeta::{ name = webhook.name }
+          , metadata = k8s.ObjectMeta::{ name = Some webhook.name }
           , spec = Some k8s.ServiceSpec::{
-            , selector = labels webhook
-            , ports =
+            , selector = Some (labels webhook)
+            , ports = Some
               [ k8s.ServicePort::{
-                , targetPort = Some (k8s.IntOrString.Int webhook.port)
-                , port = 443
+                , targetPort = Some
+                    (k8s.IntOrString.Int (Natural/toInteger webhook.port))
+                , port = Natural/toInteger 443
                 }
               ]
             }
@@ -88,7 +94,7 @@ let service =
 let issuer =
           \(webhook : Webhook)
       ->  cert-manager.Issuer::{
-          , metadata = k8s.ObjectMeta::{ name = webhook.name }
+          , metadata = k8s.ObjectMeta::{ name = Some webhook.name }
           , spec =
               cert-manager.IssuerSpec.SelfSigned
                 cert-manager.SelfSignedIssuerSpec::{=}
@@ -97,7 +103,7 @@ let issuer =
 let certificate =
           \(webhook : Webhook)
       ->  cert-manager.Certificate::{
-          , metadata = k8s.ObjectMeta::{ name = webhook.name }
+          , metadata = k8s.ObjectMeta::{ name = Some webhook.name }
           , spec = cert-manager.CertificateSpec::{
             , secretName = webhook.name
             , issuerRef = { name = webhook.name, kind = (issuer webhook).kind }
@@ -122,14 +128,16 @@ let mutatingWebhookConfiguration =
           \(webhook : Webhook)
       ->  k8s.ValidatingWebhookConfiguration::{
           , metadata = k8s.ObjectMeta::{
-            , name = webhook.name
-            , labels = labels webhook
-            , annotations = toMap
-                { `cert-manager.io/inject-ca-from` =
-                    "${webhook.namespace}/${webhook.name}"
-                }
+            , name = Some webhook.name
+            , labels = Some (labels webhook)
+            , annotations = Some
+                ( toMap
+                    { `cert-manager.io/inject-ca-from` =
+                        "${webhook.namespace}/${webhook.name}"
+                    }
+                )
             }
-          , webhooks =
+          , webhooks = Some
             [ k8s.ValidatingWebhook::{
               , name = "${webhook.name}.${webhook.namespace}.svc"
               , clientConfig = k8s.WebhookClientConfig::{
@@ -137,12 +145,12 @@ let mutatingWebhookConfiguration =
                   { name = webhook.name
                   , namespace = webhook.namespace
                   , path = Some webhook.path
-                  , port = Some 443
+                  , port = Some (Natural/toInteger 443)
                   }
                 }
               , failurePolicy = webhook.failurePolicy
-              , admissionReviewVersions = [ "v1beta1" ]
-              , rules = webhook.rules
+              , admissionReviewVersions = Some [ "v1beta1" ]
+              , rules = Some webhook.rules
               , namespaceSelector = webhook.namespaceSelector
               }
             ]
