@@ -1,6 +1,9 @@
 let argocd =
-        ../package.dhall sha256:302884c4ef81b8d5791314819bb4a96a7db71f215fd727747f93443b52ae6ef3
+        ../package.dhall sha256:ce61ca8208927e9595a030a3fa467eb48794979031c3d026b4dbd57e5cc9942d
       ? ../package.dhall
+      ? (   ../package.dhall sha256:ce61ca8208927e9595a030a3fa467eb48794979031c3d026b4dbd57e5cc9942d
+          ? ../package.dhall
+        )
 
 let config =
       argocd.util.AppConfig.DhallAppConfig
