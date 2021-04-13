@@ -1,9 +1,9 @@
 let TypesUnion =
-        ../../TypesUnion.dhall sha256:c1f91d90d8220d11f9ff8d745878da05ca9dc0af20a0792fe70c60c876308fc9
+        ../../TypesUnion.dhall sha256:d44accc04431078bc49cb9adf3a7144a4a2e961082e26073146ee9181bdbaca5
       ? ../../TypesUnion.dhall
 
 let Application =
-        ../../Application/package.dhall sha256:a6a0db9570250e7d94e9fcf7e79613fd9e12a5211c70030d58ff24fde2a4f765
+        ../../Application/package.dhall sha256:c88bb716d8533593cda61e3ec65ce361a32bcd0f5d0849689ef1286cc43e1a51
       ? ../../Application/package.dhall
 
 let ApplicationSpec =
@@ -23,7 +23,7 @@ let KustomizeSpec =
       ? ../../KustomizeSpec/package.dhall
 
 let k8s =
-        ../../../k8s/1.15.dhall sha256:4bd5939adb0a5fc83d76e0d69aa3c5a30bc1a5af8f9df515f44b6fc59a0a4815
+        ../../../k8s/1.15.dhall sha256:9ed8981915875f3bbe08ad7047d92cd181b6ece140af876beecadb8ed079e10a
       ? ../../../k8s/1.15.dhall
 
 in      \ ( appConfig
@@ -32,7 +32,7 @@ in      \ ( appConfig
           )
     ->    TypesUnion.Application
             Application::{
-            , metadata = k8s.ObjectMeta::{ name = appConfig.name }
+            , metadata = k8s.ObjectMeta::{ name = Some appConfig.name }
             , spec = ApplicationSpec::{
               , project = appConfig.project
               , source =
